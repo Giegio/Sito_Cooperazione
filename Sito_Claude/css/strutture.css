@@ -1,0 +1,154 @@
+/* Strutture Page Styles */
+.page-header {
+    background: linear-gradient(135deg, #FFED4E 0%, #FFD700 50%, #D4AF37 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.header-tag {
+    color: #1a1a1a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+}
+
+.header-title {
+    color: #1a1a1a;
+    margin: 1rem 0;
+}
+
+.header-description {
+    color: #2d2d2d;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.property-detail {
+    margin-bottom: 4rem;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.property-grid.reverse {
+    direction: rtl;
+}
+
+.property-grid.reverse > * {
+    direction: ltr;
+}
+
+.property-image-main {
+    border-radius: 12px;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.property-badge {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #FFD700;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.property-name {
+    margin-bottom: 0.5rem;
+}
+
+.property-location {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.property-description {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.property-amenities h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.amenity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.amenity-icon {
+    font-size: 1.5rem;
+}
+
+.property-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.divider {
+    height: 1px;
+    background: #d1d1d1;
+    margin: 4rem 0;
+}
+
+.cta-banner {
+    background: #FFD700;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cta-banner-content h2 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.cta-banner-content p {
+    color: #2d2d2d;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .property-grid,
+    .property-grid.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .property-cta {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

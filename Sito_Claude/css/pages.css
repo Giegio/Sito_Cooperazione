@@ -1,0 +1,213 @@
+/* Pages Styles (Contatti, Chi Sono, Esperienze, Shop) */
+
+/* Contact Page */
+.contact-page {
+    min-height: 50vh;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+}
+
+.contact-info-block {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-item-box {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.contact-icon-large {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-item-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item-box a {
+    color: #FFD700;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item-box a:hover {
+    color: #D4AF37;
+}
+
+.contact-item-box p {
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.social-links-contact {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-btn {
+    padding: 0.75rem 1.5rem;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #FFD700;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.contact-form-block {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* About Page */
+.about-page {
+    min-height: 50vh;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-photo {
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.about-content h3.text-primary {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.skill-badge {
+    background: #FFD700;
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Experiences Page */
+.experiences {
+    min-height: 50vh;
+}
+
+.experience-card {
+    height: 100%;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.experience-details li {
+    padding: 0.5rem 0;
+    color: #4a4a4a;
+}
+
+.experiences-cta {
+    background: #fafafa;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+/* Shop Page */
+.shop {
+    min-height: 50vh;
+}
+
+.shop-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-item .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin: 1rem 0;
+}
+
+.shop-cta {
+    background: #FFD700;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info-block,
+    .contact-form-block {
+        padding: 1.5rem;
+    }
+    
+    .about-photo {
+        min-height: 300px;
+    }
+}
