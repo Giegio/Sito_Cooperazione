@@ -6,7 +6,7 @@ Sito web professionale multipage per **Sara Celentani**, property manager specia
 
 ### 🎨 Design
 
-**Palette RAL 1016 - Giallo Brillante:**
+**Palette RAL 1016 - Giallo Brillante:****
 - Giallo Oro Primario: `#FFD700`
 - Giallo Accento: `#FFC300`
 - Oro Scuro: `#D4AF37`
