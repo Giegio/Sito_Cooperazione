@@ -138,7 +138,7 @@ body {
 .mission-vision {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem;
+    gap: 2rem;
 }
 
 .skills-list {
