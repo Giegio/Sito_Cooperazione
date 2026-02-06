@@ -370,3 +370,21 @@ document.querySelectorAll('[data-gallery]').forEach(gallery => {
 
     startAuto();
 });
+
+
+document.querySelectorAll('[data-card]').forEach(gallery => {
+    const slides = gallery.querySelectorAll('.slide');
+    const prev = gallery.querySelector('.prev');
+    const next = gallery.querySelector('.next');
+    let index = 0;
+    let interval;
+
+    const showSlide = i => {
+        slides[index].classList.remove('active');
+        index = (i + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    };
+
+    next.addEventListener('click', () => showSlide(index + 1));
+    prev.addEventListener('click', () => showSlide(index - 1));
+});

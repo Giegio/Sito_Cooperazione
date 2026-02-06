@@ -254,3 +254,65 @@ body {
     background: #d1d1d1;
     margin: 4rem 0;
 }
+
+.property-gallery {
+    position: relative;
+    min-height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.property-gallery .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.property-gallery .slide.active {
+    opacity: 1;
+}
+
+.property-card {
+    position: relative;
+    min-height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.property-card .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.property-card .slide.active {
+    opacity: 1;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.1s;
+    z-index: 2;
+}
+
+.property-card:hover .gallery-card {
+    opacity: 1;
+}
+
+.card-arrow.prev { left: 1px; }
+.card-arrow.next { right: 1px; }
