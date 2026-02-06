@@ -3,6 +3,21 @@
    Global Styles - RAL 1016 Yellow Palette
    ======================================== */
 
+@font-face {
+    font-family: 'Nourd';
+    src: url('nourd_light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nourd_Bold';
+    src: url('nourd_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 :root {
     /* Palette Principale - Giallo RAL 1016 Vibrante */
     --color-primary: #FFD700;        /* Giallo oro brillante */
@@ -289,7 +304,7 @@ p {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 600;

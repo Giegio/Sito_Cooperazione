@@ -342,3 +342,31 @@ window.addEventListener('load', () => {
 // ========================================
 
 document.documentElement.style.visibility = 'visible';
+
+document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    const slides = gallery.querySelectorAll('.slide');
+    const prev = gallery.querySelector('.prev');
+    const next = gallery.querySelector('.next');
+    let index = 0;
+    let interval;
+
+    const showSlide = i => {
+        slides[index].classList.remove('active');
+        index = (i + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    };
+
+    const startAuto = () => {
+        interval = setInterval(() => showSlide(index + 1), 4000);
+    };
+
+    const stopAuto = () => clearInterval(interval);
+
+    next.addEventListener('click', () => showSlide(index + 1));
+    prev.addEventListener('click', () => showSlide(index - 1));
+
+    gallery.addEventListener('mouseenter', stopAuto);
+    gallery.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+});
