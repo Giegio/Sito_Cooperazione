@@ -180,6 +180,8 @@ p {
 }
 
 .section-title {
+    font-family: Nourd_Bold;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
@@ -387,7 +389,8 @@ p {
 }
 
 .card-title {
-    font-size: 1.5rem;
+    font-family: Nourd;
+    font-size: 2rem;
     margin-bottom: 0.75rem;
 }
 

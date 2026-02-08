@@ -1,6 +1,20 @@
 /* ========================================
    Home Page Styles
    ======================================== */
+@font-face {
+    font-family: 'Nourd';
+    src: url('nourd_light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nourd_Bold';
+    src: url('nourd_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 /* Hero Section */
 .hero {
@@ -11,6 +25,7 @@
     justify-content: center;
     background: linear-gradient(135deg, #FFD700 0%, #FFC300 50%, #D4AF37 100%);
     overflow: hidden;
+    text-align: center;
 }
 
 .hero::before {
@@ -43,11 +58,14 @@
 }
 
 .hero-text {
-    max-width: 900px;
+    /*max-width: 900px;*/
+    margin: 0 auto;
     animation: fadeInUp 1s ease;
 }
 
 .hero-title {
+    font-family: Nourd_Bold;
+    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
@@ -85,14 +103,14 @@
     font-size: 1.25rem;
     color: var(--color-black);
     line-height: 1.8;
-    max-width: 700px;
+    /*max-width: 700px;*/
     margin-bottom: 2.5rem;
     opacity: 0;
     animation: fadeInUp 0.8s ease 0.8s forwards;
 }
 
 .hero-cta {
-    display: flex;
+    /*display: flex;*/
     gap: 1.5rem;
     flex-wrap: wrap;
     opacity: 0;
@@ -170,6 +188,7 @@
 }
 
 .service-title {
+    font-family: Nourd;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--color-black);
@@ -298,9 +317,24 @@
 }
 
 .why-me-stats {
+    display: flex;
+    flex-direction: column; /* Gli elementi vanno dall'alto in basso */
+    gap: 2rem; /* Spazio tra foto e griglia statistiche */
+}
+
+.why-me-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+}
+
+.why-me-image {
+    width: 40%;
+    height: 250px;
+	background-size: cover; /* Ridimensiona l'immagine per coprire tutta la cornice */
+	background-position: center; /* Centra l'immagine nella cornice */
+	background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+    border-radius: var(--radius-md) var(--radius-md) var(--radius-md) var(--radius-md);
 }
 
 .stat-box {
@@ -347,6 +381,7 @@
 
 .cta-title {
     color: var(--color-white);
+    font-family: Nourd_Bold;
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1.5rem;
 }
@@ -393,10 +428,14 @@
 }
 
 .logo-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--color-black);
-    color: var(--color-primary);
+    width: 60px;
+    height: 60px;
+    min-width: 50px;
+    background-color: var(--color-black);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
