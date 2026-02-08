@@ -123,7 +123,7 @@ ul {
    Typography
    ======================================== */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
     line-height: 1.3;
@@ -132,14 +132,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    font-family: Nourd_Bold;    
     font-size: clamp(2.5rem, 6vw, 4rem);
 }
 
 h2 {
+    font-family: Nourd_Bold;    
     font-size: clamp(2rem, 5vw, 3rem);
 }
 
 h3 {
+    font-family: Nourd;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--color-black);
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
