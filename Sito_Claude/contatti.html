@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pages.css">
 </head>
@@ -40,61 +41,74 @@
         </div>
     </section>
 
-    <section class="contact-page section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info-block">
-                    <h2>Informazioni di Contatto</h2>
-                    <div class="contact-items">
-                        <div class="contact-item-box">
-                            <span class="contact-icon-large">📧</span>
-                            <h3>Email</h3>
-                            <a href="mailto:sara.celentani@gmail.com">sara.celentani@gmail.com</a>
+    <section class="contact-page-compact">
+        <div class="container-narrow">
+            <div class="contact-grid-compact">
+                <div class="contact-info-compact">
+                    <h2 class="section-title">Contattami</h2>
+                    <div class="contact-info-list">
+                        <div class="info-row">
+                            <span class="info-icon">📧</span>
+                            <div>
+                                <small>Email</small>
+                                <a href="mailto:sara.celentani@gmail.com">sara.celentani@gmail.com</a>
+                            </div>
                         </div>
-                        <div class="contact-item-box">
-                            <span class="contact-icon-large">📱</span>
-                            <h3>Telefono</h3>
-                            <a href="https://wa.me/qr/OF4DUIL77KCZA1">+39 331 125 0968</a>
+                        <div class="info-row">
+                            <span class="info-icon">📱</span>
+                            <div>
+                                <small>Telefono</small>
+                                <a href="https://wa.me/393311250968">+39 331 125 0968</a>
+                            </div>
                         </div>
-                        <div class="contact-item-box">
-                            <span class="contact-icon-large">📍</span>
-                            <h3>Sede</h3>
-                            <p>Via U. Terracini n.22/N<br>Campi Bisenzio 50013 - Firenze</p>
+                        <div class="info-row">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <small>Sede</small>
+                                <p>Via U. Terracini 22/N, FI</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="social-links-contact">
-                        <a href="https://www.instagram.com/scpropertyexpert/" target="_blank" class="social-btn" aria-label="Instagram">Instagram</a>
-                        <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-btn" aria-label="Facebook">Facebook</a>
-                        <a href="https://www.linkedin.com/in/saracelentani-propertymanager/" target="_blank" class="social-btn" aria-label="LinkedIn">Linkedin</a>
-                    </div>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/scpropertyexpert/" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saracelentani-propertymanager/" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/393311250968" target="_blank" class="social-link" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        </div>
                 </div>
-                
-                <div class="contact-form-block">
-                    <h2>Invia un Messaggio</h2>
-                    <form class="contact-form-simple">
-                        <div class="form-group">
-                            <label class="form-label">Nome *</label>
-                            <input type="text" class="form-control" required>
+
+                <div class="contact-form-compact">
+                    <form action="https://formspree.io/f/xlgwdzjw" method="POST" class="contact-form-simple">
+                        <div class="grid-form">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Nome *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="Email" class="form-control" placeholder="Email *" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email *</label>
-                            <input type="email" class="form-control" required>
+                            <input type="text" name="Oggetto" class="form-control" placeholder="Oggetto">
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Oggetto</label>
-                            <input type="text" class="form-control">
+                            <textarea name="Messaggio" class="form-control" rows="3" placeholder="Messaggio *" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label">Messaggio *</label>
-                            <textarea class="form-control" rows="5" required></textarea>
-                        </div>
+                        <input type="text" name="_gotcha" style="display:none">
+
                         <button type="submit" class="btn btn-primary btn-full">Invia Messaggio</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -111,9 +125,18 @@
                         Trasformo case in esperienze e immobili in investimenti di successo. Gestione completa e servizi personalizzati per ospiti e proprietari, con cura, professionalità e risultati garantiti.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/scpropertyexpert/" target="_blank" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="https://www.linkedin.com/in/saracelentani-propertymanager/" target="_blank" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="https://www.instagram.com/scpropertyexpert/" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saracelentani-propertymanager/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/393311250968" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 

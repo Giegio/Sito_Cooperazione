@@ -1,7 +1,7 @@
 /* Proprietari Page Styles */
 .hero-owners {
     background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
-    padding: 8rem 0 4rem;
+    padding: 5.85rem 0 0;
 }
 
 .hero-owners-content {
@@ -9,6 +9,14 @@
     grid-template-columns: 1.5fr 1fr;
     gap: 3rem;
     align-items: start;
+}
+
+.hero-overlay-img {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .hero-tag {

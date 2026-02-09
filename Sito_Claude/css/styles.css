@@ -543,6 +543,7 @@ textarea.form-control {
 .footer-social {
     display: flex;
     gap: 1rem;
+    border-radius: 12px;
     margin-top: 1rem;
 }
 
@@ -554,7 +555,8 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px;
+    /*border-radius: 50%;*/
     transition: all var(--transition-base);
     font-size: 1.25rem;
 }
@@ -563,6 +565,7 @@ textarea.form-control {
     background: var(--color-primary);
     color: var(--color-black);
     transform: translateY(-3px);
+    color: #0077b5; /* Esempio: colore LinkedIn */
 }
 
 /* ========================================

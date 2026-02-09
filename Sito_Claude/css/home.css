@@ -283,7 +283,7 @@
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: top;
 }
 
 .why-features {
@@ -324,25 +324,41 @@
     margin: 0;
 }
 
+/* Contenitore principale delle statistiche e immagini */
 .why-me-stats {
     display: flex;
-    flex-direction: column; /* Gli elementi vanno dall'alto in basso */
-    gap: 2rem; /* Spazio tra foto e griglia statistiche */
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .why-me-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 0.7rem;
 }
 
+/* Contenitore delle due immagini affiancate */
+.why-me-images {
+    display: flex;
+    gap: 15px;         /* Spazio tra le due foto */
+    align-items: stretch; /* Forza entrambe le immagini ad avere la stessa altezza */
+    width: 100%;
+}
+
+/* Regole per le singole immagini */
 .why-me-image {
-    width: 40%;
-    height: 250px;
-	background-size: cover; /* Ridimensiona l'immagine per coprire tutta la cornice */
-	background-position: center; /* Centra l'immagine nella cornice */
-	background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
-    border-radius: var(--radius-md) var(--radius-md) var(--radius-md) var(--radius-md);
+    flex: 1;           /* Divide lo spazio al 50% tra le due foto */
+    height: 450px;     /* Definisci qui l'altezza che desideri */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease;
+}
+
+/* Effetto hover opzionale */
+.why-me-image:hover {
+    transform: scale(1.02);
 }
 
 .stat-box {
@@ -481,6 +497,13 @@
     
     .why-me-stats {
         order: -1;
+    }
+
+    .why-me-images {
+        flex-direction: column; /* Le foto vanno una sotto l'altra sul cellulare */
+    }
+    .why-me-image {
+        height: 300px; /* Altezza ridotta per il mobile */
     }
 }
 
