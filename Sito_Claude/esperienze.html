@@ -31,64 +31,723 @@
         </div>
     </nav>
 
-    <section class="page-header"><div class="container"><span class="header-tag">Esperienze e Servizi</span><h1 class="header-title">Vivi Esperienze Locali</h1><p class="header-description">Attività autentiche e servizi su misura per goderti al massimo la tua vacanza!</p></div></section>
+<section class="page-header">
+    <div class="container">
+        <span class="header-tag">Esperienze e Servizi</span>
+        <h1 class="header-title">Rendi completo il tuo Soggiorno</h1>
+        <p class="header-subtitle">Scopri attività uniche e servizi su misura per una vacanza indimenticabile. Collaboriamo con associazioni benefiche locali e realtà culturali del territorio: con ogni prenotazione contribuisci direttamente al loro lavoro. Attualmente operiamo in Toscana, con l'obiettivo di estendere presto i nostri servizi in tutta Italia.</p>
+    </div>
+</section>
 
-    <section class="experiences section">
-        <div class="container">
-            <div class="grid grid-3">
-                <div class="experience-card card">
-                    <div class="card-img" style="background:linear-gradient(135deg,#FFD700,#FFC300);height:250px;"></div>
-                    <div class="card-body">
-                        <h3>📸 Book Fotografico</h3>
-                        <p>Servizio fotografico professionale per immortalare i tuoi momenti in Toscana. Fotografo esperto e location suggestive.</p>
-                        <ul class="experience-details">
-                            <li>✓ 2 ore di shooting</li>
-                            <li>✓ Location a scelta</li>
-                            <li>✓ 50+ foto editate</li>
-                            <li>✓ Consegna digitale</li>
-                        </ul>
-                        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
-                    </div>
-                </div>
-
-                <div class="experience-card card">
-                    <div class="card-img" style="background:linear-gradient(135deg,#D4AF37,#B8860B);height:250px;"></div>
-                    <div class="card-body">
-                        <h3>🐴 Passeggiata a Cavallo</h3>
-                        <p>Esplora le colline toscane a cavallo con guide esperte. Un'esperienza autentica immersi nella natura.</p>
-                        <ul class="experience-details">
-                            <li>✓ 3 ore di percorso</li>
-                            <li>✓ Guida qualificata</li>
-                            <li>✓ Tutti i livelli</li>
-                            <li>✓ Rinfresco incluso</li>
-                        </ul>
-                        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
-                    </div>
-                </div>
-
-                <div class="experience-card card">
-                    <div class="card-img" style="background:linear-gradient(135deg,#FFED4E,#FFD700);height:250px;"></div>
-                    <div class="card-body">
-                        <h3>🎵 Esperienza Musicale</h3>
-                        <p>Serata privata con musicista dal vivo. Jazz, classica o italiana: la colonna sonora perfetta per la tua serata.</p>
-                        <ul class="experience-details">
-                            <li>✓ 2 ore di musica live</li>
-                            <li>✓ Repertorio personalizzato</li>
-                            <li>✓ Musicista professionista</li>
-                            <li>✓ Setup completo</li>
-                        </ul>
-                        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experiences-cta section-sm text-center">
-                <h2>Vuoi Creare un'Esperienza Personalizzata?</h2>
-                <p class="lead">Contattami per dare vita a esperienze su misura: chef privati, wine tasting, tour culturali ed eventi speciali.</p>
-                <a href="contatti.html" class="btn btn-secondary btn-lg">Contattami</a>
+<section class="experiences section">
+    <div class="container">
+        <!-- FILTRO A FINESTRELLA -->
+        <div class="experience-filters text-center mb-4">
+            <button class="btn btn-outline-primary" id="filterToggle">Filtra Esperienze ▼</button>
+            <div id="filterMenu" style="display:none; margin-top:10px;">
+                <button class="filter-btn btn btn-outline-primary active" data-filter="all">Tutte</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="fotografia">📸 Fotografia</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="natura">🐴 Natura & Avventura</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="musica">🎵 Musica</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="teatro">🎭 Teatro & Cultura</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="benessere">🧘‍♂️ Benessere</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="food">🍷 Food & Wine</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="artigianato">🖌️ Artigianato</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="lusso">🚗 Lusso</button>
             </div>
         </div>
-    </section>
+
+      <br><br>
+  <div class="grid grid-3" id="experience-grid">
+
+            <!-- 📸 Book Fotografico -->
+            <div class="experience-card card" data-category="fotografia">
+                <div class="card-img" style="background:linear-gradient(135deg,#FFD700,#FFC300);height:250px;"></div>
+                <div class="card-body">
+                    <h3>📸 Book Fotografico</h3>
+                    <p>Servizio fotografico professionale per immortalare i tuoi momenti in Toscana. Fotografo esperto e location suggestive.</p>
+                    <ul class="experience-details">
+                        <li>✓ 2 ore di shooting</li>
+                        <li>✓ Location a scelta</li>
+                        <li>✓ 50+ foto editate</li>
+                        <li>✓ Consegna digitale</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🐴 Passeggiata a Cavallo -->
+            <div class="experience-card card" data-category="natura">
+                <div class="card-img" style="background:linear-gradient(135deg,#D4AF37,#B8860B);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🐴 Passeggiata a Cavallo</h3>
+                    <p>Esplora le colline toscane a cavallo con guide esperte. Un'esperienza autentica immersi nella natura.</p>
+                    <ul class="experience-details">
+                        <li>✓ 3 ore di percorso</li>
+                        <li>✓ Guida qualificata</li>
+                        <li>✓ Tutti i livelli</li>
+                        <li>✓ Rinfresco incluso</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🎵 Esperienza Musicale -->
+            <div class="experience-card card" data-category="musica">
+                <div class="card-img" style="background:linear-gradient(135deg,#FFED4E,#FFD700);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🎵 Esperienza Musicale</h3>
+                    <p>Serata privata con musicista dal vivo. Jazz, classica o italiana: la colonna sonora perfetta per la tua serata.</p>
+                    <ul class="experience-details">
+                        <li>✓ 2 ore di musica live</li>
+                        <li>✓ Repertorio personalizzato</li>
+                        <li>✓ Musicista professionista</li>
+                        <li>✓ Setup completo</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+<!-- 🎤 Workshop di Canto Pop -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#FF1493,#C71585);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎤 Workshop di Canto Pop</h3>
+        <p>Scopri la tua voce in un mini-corso intensivo di canto pop. Tecnica vocale, interpretazione e divertimento con insegnanti professionisti.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2–3 ore</li>
+            <li>✓ Insegnanti diplomati</li>
+            <li>✓ Esercizi di tecnica vocale</li>
+            <li>✓ Adatto a principianti</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎭 Esperienza di Canto Lirico -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#8B4789,#6A1B68);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎭 Esperienza di Canto Lirico</h3>
+        <p>Immergiti nel fascino dell'opera italiana. Mini-lezione di canto lirico per scoprire le tecniche del belcanto e le arie più celebri.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore</li>
+            <li>✓ Maestri di canto lirico</li>
+            <li>✓ Repertorio operistico italiano</li>
+            <li>✓ Esperienza culturale unica</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎹 Lezione di Pianoforte -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#4169E1,#1E3A8A);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎹 Lezione di Pianoforte</h3>
+        <p>Avvicinati al pianoforte con una lezione introduttiva o approfondisci la tua tecnica. Un'esperienza musicale raffinata nel cuore della Toscana.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 1,5–2 ore</li>
+            <li>✓ Pianisti professionisti</li>
+            <li>✓ Pianoforte a coda disponibile</li>
+            <li>✓ Tutti i livelli benvenuti</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎸 Workshop di Chitarra -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#D2691E,#8B4513);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎸 Workshop di Chitarra</h3>
+        <p>Impara le basi della chitarra o perfeziona la tua tecnica in una sessione intensiva. Acustica o elettrica, scegli il tuo stile.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore</li>
+            <li>✓ Chitarristi esperti</li>
+            <li>✓ Strumenti forniti</li>
+            <li>✓ Stili: rock, pop, classico</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🥁 Esperienza di Batteria -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#DC143C,#8B0000);height:250px;"></div>
+    <div class="card-body">
+        <h3>🥁 Esperienza di Batteria</h3>
+        <p>Scarica l'energia con una sessione di batteria! Ritmo, groove e divertimento con percussionisti professionisti. Perfetto per sfogare lo stress.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 1,5–2 ore</li>
+            <li>✓ Batteristi professionisti</li>
+            <li>✓ Batteria completa disponibile</li>
+            <li>✓ Esperienza energetica e liberatoria</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎼 Aperitivo con Musica Classica Live -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#9370DB,#6A5ACD);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎼 Aperitivo con Musica Classica Live</h3>
+        <p>Pomeriggio raffinato con musicista dal vivo. Pianoforte o chitarra classica accompagnano il tuo aperitivo in location suggestive.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore (aperitivo + concerto)</li>
+            <li>✓ Musicista classico professionista</li>
+            <li>✓ Repertorio: Bach, Mozart, Chopin</li>
+            <li>✓ Atmosfera elegante e rilassante</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎶 "Voce e Vino" - Canto tra le Vigne -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#8B4513,#A0522D);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎶 "Voce e Vino" - Canto tra le Vigne</h3>
+        <p>Esperienza unica che unisce canto e degustazione. Impara una canzone italiana classica e brinda con un calice di vino toscano nel cuore del Chianti.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2,5 ore</li>
+            <li>✓ Mini-lezione di canto con Silvia Pacini</li>
+            <li>✓ Repertorio italiano tradizionale</li>
+            <li>✓ Degustazione vino locale inclusa</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎤 Karaoke Professionale con Coach Vocale -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#FF69B4,#FF1493);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎤 Karaoke Professionale con Coach Vocale</h3>
+        <p>Non il solito karaoke! Canta le tue canzoni preferite con il supporto di un vocal coach professionista che ti guida in tempo reale.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore</li>
+            <li>✓ Coaching vocale dal vivo</li>
+            <li>✓ Registrazione della tua performance</li>
+            <li>✓ Perfetto per gruppi di amici</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎵 "Canzone Italiana" - Masterclass Intensiva -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#228B22,#006400);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎵 "Canzone Italiana" - Masterclass Intensiva</h3>
+        <p>Immergiti nella tradizione della canzone italiana classica. Da Mina a Battisti, scopri i segreti dell'interpretazione delle grandi icone italiane.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 3 ore</li>
+            <li>✓ Docente: Silvia Pacini</li>
+            <li>✓ Repertorio: canzone italiana d'autore</li>
+            <li>✓ Interpretazione e stile vocale</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎭 "Dalla Piazza all'Opera" - Tour Musicale di Firenze -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#4B0082,#8B008B);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎭 "Dalla Piazza all'Opera" - Tour Musicale di Firenze</h3>
+        <p>Passeggiata culturale nei luoghi della musica fiorentina con performance dal vivo. Dalla canzone popolare all'opera lirica, storia e voce si intrecciano.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 3 ore</li>
+            <li>✓ Tour guidato + performance live</li>
+            <li>✓ Luoghi storici musicali di Firenze</li>
+            <li>✓ Cantante professionista accompagna il tour</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎼 Jam Session Guidata -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#FF8C00,#FF4500);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎼 Jam Session Guidata</h3>
+        <p>Suona insieme ad altri musicisti in una jam session coordinata da professionisti. Chitarra, pianoforte, batteria e voce: crea musica insieme!</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2,5 ore</li>
+            <li>✓ Musicisti professionisti come guida</li>
+            <li>✓ Tutti gli strumenti disponibili</li>
+            <li>✓ Esperienza collaborativa e creativa</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎹 "Canta al Pianoforte" - Voce e Accompagnamento -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#20B2AA,#008B8B);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎹 "Canta al Pianoforte" - Voce e Accompagnamento</h3>
+        <p>Esperienza romantica e raffinata: impara a cantare accompagnato dal pianoforte. Tecnica vocale e interpretazione in un contesto intimo ed elegante.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore</li>
+            <li>✓ Vocal coach + pianista</li>
+            <li>✓ Repertorio jazz, pop o classico</li>
+            <li>✓ Atmosfera intima e professionale</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎤 Registrazione in Studio Professionale -->
+<div class="experience-card card" data-category="musica">
+    <div class="card-img" style="background:linear-gradient(135deg,#2F4F4F,#000000);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎤 Registrazione in Studio Professionale</h3>
+        <p>Vivi l'emozione di registrare la tua canzone preferita in uno studio professionale. Porta a casa un ricordo unico della tua vacanza in Toscana!</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2–3 ore</li>
+            <li>✓ Studio di registrazione professionale</li>
+            <li>✓ Tecnico del suono + vocal coach</li>
+            <li>✓ File audio professionale da portare a casa</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎵 Concerto Privato Lirico -->
+<div class="experience-card card" data-category="lusso">
+    <div class="card-img" style="background:linear-gradient(135deg,#FFD700,#DAA520);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎵 Concerto Privato Lirico</h3>
+        <p>Serata esclusiva con soprano o tenore professionista. Le più belle arie d'opera italiana in un concerto privato indimenticabile.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 1–1,5 ore di performance</li>
+            <li>✓ Cantante lirico professionista</li>
+            <li>✓ Repertorio: Verdi, Puccini, Rossini</li>
+            <li>✓ Location personalizzabile</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎸 Concerto Live con Band Completa -->
+<div class="experience-card card" data-category="lusso">
+    <div class="card-img" style="background:linear-gradient(135deg,#FF4500,#DC143C);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎸 Concerto Live con Band Completa</h3>
+        <p>Band professionale completa per la tua serata esclusiva. Rock, pop, jazz o italiano: un vero concerto privato su misura per te.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2–3 ore di musica live</li>
+            <li>✓ Band completa (voce, chitarra, batteria, basso)</li>
+            <li>✓ Repertorio personalizzato</li>
+            <li>✓ Setup audio professionale incluso</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎭 "Arie & Aperitivo" - Opera Experience -->
+<div class="experience-card card" data-category="lusso">
+    <div class="card-img" style="background:linear-gradient(135deg,#B8860B,#8B4513);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎭 "Arie & Aperitivo" - Opera Experience</h3>
+        <p>Serata esclusiva con soprano professionista Silvia Pacini. Concerto lirico privato con aperitivo gourmet in location storica fiorentina.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 2 ore</li>
+            <li>✓ Soprano Silvia Pacini</li>
+            <li>✓ Repertorio: Puccini, Verdi, Rossini</li>
+            <li>✓ Aperitivo gourmet incluso</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎵 Serenata Italiana Privata -->
+<div class="experience-card card" data-category="lusso">
+    <div class="card-img" style="background:linear-gradient(135deg,#DC143C,#8B0000);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎵 Serenata Italiana Privata</h3>
+        <p>Sorprendi qualcuno di speciale con una serenata italiana tradizionale. Cantante e chitarrista sotto le stelle per un momento romantico indimenticabile.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 30–45 minuti</li>
+            <li>✓ Cantante professionista + chitarra</li>
+            <li>✓ Location a scelta (piazza, terrazza, giardino)</li>
+            <li>✓ Perfetto per occasioni speciali</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🎸 "Musica & Cena" - Dinner Concert Esclusivo -->
+<div class="experience-card card" data-category="lusso">
+    <div class="card-img" style="background:linear-gradient(135deg,#4B0082,#2F004F);height:250px;"></div>
+    <div class="card-body">
+        <h3>🎸 "Musica & Cena" - Dinner Concert Esclusivo</h3>
+        <p>Cena privata con concerto dal vivo. Musica raffinata (jazz, classica o italiana) accompagna un menu gourmet in location d'eccezione.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 3–4 ore</li>
+            <li>✓ Ensemble musicale professionale</li>
+            <li>✓ Cena gourmet inclusa</li>
+            <li>✓ Location esclusive in Toscana</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+            <!-- 🌿 Tour in Toscana con Pulmini -->
+            <div class="experience-card card" data-category="natura">
+                <div class="card-img" style="background:linear-gradient(135deg,#32CD32,#228B22);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🌿 Tour in Toscana con Pulmini</h3>
+                    <p>Visite guidate per scoprire i tesori nascosti della Toscana, adatto a gruppi e famiglie.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata variabile</li>
+                        <li>✓ Guide esperte</li>
+                        <li>✓ Trasporto confortevole</li>
+                        <li>✓ Itinerari personalizzabili</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🍄 Esperienza "Cerca il Tartufo" -->
+            <div class="experience-card card" data-category="natura">
+                <div class="card-img" style="background:linear-gradient(135deg,#8B4513,#A0522D);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🍄 Esperienza "Cerca il Tartufo"</h3>
+                    <p>Vivi l'emozione della ricerca del tartufo con cane addestrato, tra boschi e colline toscane.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 2–3 ore</li>
+                        <li>✓ Cane addestrato incluso</li>
+                        <li>✓ Guide esperte</li>
+                        <li>✓ Degustazione finale possibile</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🍷 Esperienza Vini nel Chianti -->
+            <div class="experience-card card" data-category="food">
+                <div class="card-img" style="background:linear-gradient(135deg,#800000,#B22222);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🍷 Esperienza Vini nel Chianti</h3>
+                    <p>Tour guidato nelle cantine del Chianti con degustazioni e approfondimenti sul territorio.</p>
+                    <ul class="experience-details">
+                        <li>✓ Visita 2–3 cantine</li>
+                        <li>✓ Degustazioni guidate</li>
+                        <li>✓ Storia e cultura del vino</li>
+                        <li>✓ Trasporto incluso</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 👨‍🍳 Esperienze Enogastronomiche -->
+            <div class="experience-card card" data-category="food">
+                <div class="card-img" style="background:linear-gradient(135deg,#FF6347,#FF4500);height:250px;"></div>
+                <div class="card-body">
+                    <h3>👨‍🍳 Esperienze Enogastronomiche</h3>
+                    <p>Cooking class, degustazioni e laboratori per scoprire i sapori autentici della Toscana.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 2–4 ore</li>
+                        <li>✓ Chef esperti</li>
+                        <li>✓ Ingredienti locali</li>
+                        <li>✓ Ricette da portare a casa</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+<!-- 🧘 Sessione di Meditazione -->
+<div class="experience-card card" data-category="benessere">
+    <div class="card-img" style="background:linear-gradient(135deg,#9370DB,#6A5ACD);height:250px;"></div>
+    <div class="card-body">
+        <h3>🧘 Sessione di Meditazione</h3>
+        <p>Un viaggio interiore attraverso tecniche di meditazione guidata e respiro consapevole. Ritrova equilibrio e serenità immerso nella tranquillità della campagna toscana.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 1,5–2 ore</li>
+            <li>✓ Istruttore certificato</li>
+            <li>✓ Tecniche di respirazione e mindfulness</li>
+            <li>✓ Location immersa nella natura</li>
+            <li>✓ Adatto a tutti i livelli</li>
+            <li>✓ Tappetini e cuscini forniti</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+<!-- 🧘‍♀️ Sessione di Yoga -->
+<div class="experience-card card" data-category="benessere">
+    <div class="card-img" style="background:linear-gradient(135deg,#48C9B0,#16A085);height:250px;"></div>
+    <div class="card-body">
+        <h3>🧘‍♀️ Sessione di Yoga</h3>
+        <p>Pratica yoga all'aperto tra colline e vigneti. Un'esperienza rigenerante che unisce movimento consapevole, respiro e connessione con la natura circostante.</p>
+        <ul class="experience-details">
+            <li>✓ Durata: 1,5–2 ore</li>
+            <li>✓ Insegnante yoga qualificato</li>
+            <li>✓ Hatha, Vinyasa o Yin Yoga</li>
+            <li>✓ Location panoramica all'aperto</li>
+            <li>✓ Per principianti e praticanti esperti</li>
+            <li>✓ Attrezzatura inclusa</li>
+        </ul>
+        <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+    </div>
+</div>
+
+
+            <!-- 🎭 Mini-Workshop di Teatro e Connessione -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#FF6B6B,#C92A2A);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🎭 Mini-Workshop di Teatro e Connessione</h3>
+                    <p>Laboratorio esperienziale orientato alla connessione, al gioco e alla presenza attraverso il linguaggio teatrale. Un modo leggero e coinvolgente per connetterti con te stesso e gli altri.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 3 ore</li>
+                        <li>✓ Lingua: Italiano/Inglese</li>
+                        <li>✓ Esercizi di espressività corporea e vocale</li>
+                        <li>✓ Giochi teatrali di relazione e ascolto</li>
+                        <li>✓ Movimento guidato per rilassarsi e socializzare</li>
+                        <li>✓ Nessuna esperienza teatrale richiesta</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🤌 Parla con le mani – Il linguaggio dei gesti italiani -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#6A5ACD,#483D8B);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🤌 Parla con le mani – Il linguaggio dei gesti italiani</h3>
+                    <p>Scopri il patrimonio culturale immateriale italiano attraverso i gesti, combinando teatro e counseling esperienziale. Perfetto per immergersi nella cultura italiana in modo unico e accessibile.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 2,5–3 ore</li>
+                        <li>✓ Lingua: inglese semplice + linguaggio corporeo</li>
+                        <li>✓ Introduzione ludica ai gesti più iconici</li>
+                        <li>✓ Lavoro teatrale su intenzione, ritmo e relazione</li>
+                        <li>✓ Improvvisazioni ispirate alla vita quotidiana italiana</li>
+                        <li>✓ Collaborazione con stile teatro e counseling</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🧘‍♂️ Teatro, Mindfulness e Benessere -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#4ECDC4,#1A7D76);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🧘‍♂️ Teatro, Mindfulness e Benessere</h3>
+                    <p>Format che integra teatro, consapevolezza corporea e rilassamento, immersi in contesti naturali o urbani tranquilli. Un'esperienza rigenerante che nutre corpo e spirito.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 3–4 ore</li>
+                        <li>✓ Lingua: Italiano/Inglese</li>
+                        <li>✓ Pratiche di ascolto del corpo e presenza</li>
+                        <li>✓ Momenti di rilassamento guidato</li>
+                        <li>✓ Improvvisazione creativa e sensoriale</li>
+                        <li>✓ Connessione con il paesaggio circostante</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🌍 Beyond Words – Teatro senza lingua -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#F39C12,#D68910);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🌍 Beyond Words – Teatro senza lingua</h3>
+                    <p>Esperienza non verbale per dimostrare che per capirsi non serve parlare, attraverso corpo, spazio e relazione. Un'esperienza universale che abbatte ogni barriera linguistica.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 2,5–3 ore</li>
+                        <li>✓ Lingua: prevalentemente non verbale</li>
+                        <li>✓ Giochi teatrali basati su sguardo, distanza e movimento</li>
+                        <li>✓ Esercizi di ascolto non verbale</li>
+                        <li>✓ Improvvisazioni silenziose</li>
+                        <li>✓ Creazione collettiva finale</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🎨 Teatro Introspettivo (Half-Day) -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#9B59B6,#6C3483);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🎨 Teatro Introspettivo (Half-Day)</h3>
+                    <p>Laboratorio breve basato sul teatro introspettivo, finalizzato a favorire consapevolezza, creatività e riflessione personale. Un'esperienza memorabile che arricchisce il viaggio oltre i monumenti.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 3–4 ore</li>
+                        <li>✓ Lingua: Italiano/Inglese</li>
+                        <li>✓ Esercizi guidati di ascolto e presenza</li>
+                        <li>✓ Pratiche teatrali introspettive</li>
+                        <li>✓ Spazio finale di condivisione (facoltativo)</li>
+                        <li>✓ Clima accogliente e non performativo</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🏛️ "Firenze, città-soglia" – Esperienza Territoriale -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#E74C3C,#A93226);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🏛️ "Firenze, città-soglia" – Esperienza Territoriale</h3>
+                    <p>Firenze come città di passaggio, rinascita e trasformazione. Non visiti Firenze – la abiti. L'arte non viene spiegata – viene attraversata.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 3–4 ore</li>
+                        <li>✓ Lingua: Italiano/Inglese</li>
+                        <li>✓ Camminata lenta in luoghi simbolici (Oltrarno, San Miniato)</li>
+                        <li>✓ Esercizi teatrali di ascolto, presenza e gesto</li>
+                        <li>✓ Micro-azioni ispirate al Rinascimento e alle botteghe artigiane</li>
+                        <li>✓ Immersione culturale ed emotiva profonda</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 📍 Scopri te stesso attraverso l'arte -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#3498DB,#21618C);height:250px;"></div>
+                <div class="card-body">
+                    <h3>📍 Scopri te stesso attraverso l'arte</h3>
+                    <p>Percorso esperienziale completo che unisce teatro, introspezione e condivisione in una giornata indimenticabile. Un viaggio nel viaggio – scopri Firenze scoprendo te stesso.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 4–6 ore (giornata intera)</li>
+                        <li>✓ Lingua: Italiano/Inglese</li>
+                        <li>✓ Esercizi teatrali progressivi</li>
+                        <li>✓ Momenti di introspezione guidata</li>
+                        <li>✓ Passeggiate espressive nel territorio</li>
+                        <li>✓ Restituzione e confronto finale</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🤝 Teatro Espressivo per Gruppi Interculturali -->
+            <div class="experience-card card" data-category="teatro">
+                <div class="card-img" style="background:linear-gradient(135deg,#16A085,#117A65);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🤝 Teatro Espressivo per Gruppi Interculturali</h3>
+                    <p>Esperienza rivolta a gruppi internazionali, basata sul linguaggio universale del corpo e del gioco teatrale. Adatta a viaggi studio e team building esperienziale.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: mezza giornata</li>
+                        <li>✓ Lingua: Multilingue / universale</li>
+                        <li>✓ Giochi di gruppo e improvvisazione</li>
+                        <li>✓ Esercizi di comunicazione espressiva</li>
+                        <li>✓ Dinamiche di connessione interculturale</li>
+                        <li>✓ Perfetto per gruppi turistici e team</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🏡 Guida Turistica in P.IVA -->
+            <div class="experience-card card" data-category="natura">
+                <div class="card-img" style="background:linear-gradient(135deg,#4682B4,#1E90FF);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🏡 Guida Turistica in P.IVA</h3>
+                    <p>Tour personalizzati e multilingue per scoprire Firenze e la Toscana con esperti locali.</p>
+                    <ul class="experience-details">
+                        <li>✓ Tour culturali e tematici</li>
+                        <li>✓ Lingue multiple disponibili</li>
+                        <li>✓ Durata personalizzabile</li>
+                        <li>✓ Accesso a luoghi esclusivi</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🖌️ Artigiani Locali -->
+            <div class="experience-card card" data-category="artigianato">
+                <div class="card-img" style="background:linear-gradient(135deg,#FF8C00,#FFA500);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🖌️ Artigiani Locali</h3>
+                    <p>Laboratori e visite presso botteghe artigiane nel centro di Firenze per scoprire mestieri tradizionali.</p>
+                    <ul class="experience-details">
+                        <li>✓ Esperienze pratiche e dimostrative</li>
+                        <li>✓ Durata: 1–2 ore</li>
+                        <li>✓ Materiali forniti</li>
+                        <li>✓ Possibilità di acquisto artigianale</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🐾 Gattile / Canile – Volontariato -->
+            <div class="experience-card card" data-category="natura">
+                <div class="card-img" style="background:linear-gradient(135deg,#A9A9A9,#808080);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🐾 Gattile / Canile – Volontariato</h3>
+                    <p>Esperienza benefica a contatto con animali in difficoltà, con possibilità di supportare strutture locali.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata: 2–3 ore</li>
+                        <li>✓ Attività pratiche di supporto</li>
+                        <li>✓ Esperienza educativa</li>
+                        <li>✓ Adatto a famiglie e singoli</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+            <!-- 🚗 Noleggio Auto di Lusso -->
+            <div class="experience-card card" data-category="lusso">
+                <div class="card-img" style="background:linear-gradient(135deg,#C0C0C0,#696969);height:250px;"></div>
+                <div class="card-body">
+                    <h3>🚗 Noleggio Auto di Lusso</h3>
+                    <p>Esplora la Toscana a bordo di auto di lusso con percorsi panoramici e assistenza dedicata.</p>
+                    <ul class="experience-details">
+                        <li>✓ Durata flessibile</li>
+                        <li>✓ Auto selezionate</li>
+                        <li>✓ Assicurazione inclusa</li>
+                        <li>✓ Possibilità di autista</li>
+                    </ul>
+                    <a href="contatti.html" class="btn btn-primary mt-2">Prenota Ora</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="experiences-cta section-sm text-center">
+            <h2>Vuoi Creare un'Esperienza Personalizzata?</h2>
+            <p class="lead">Contattami per dare vita a esperienze su misura: chef privati, wine tasting, tour culturali ed eventi speciali.</p>
+            <a href="contatti.html" class="btn btn-secondary btn-lg">Contattami</a>
+        </div>
+    </div>
+</section>
+
+<!-- SCRIPT FILTRI A FINESTRELLA -->
+<script>
+    const filterToggle = document.getElementById('filterToggle');
+    const filterMenu = document.getElementById('filterMenu');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const experienceCards = document.querySelectorAll('.experience-card');
+
+    // Mostra / nascondi menu
+    filterToggle.addEventListener('click', () => {
+        if(filterMenu.style.display === 'none'){
+            filterMenu.style.display = 'block';
+            filterToggle.textContent = 'Filtra Esperienze ▲';
+        } else {
+            filterMenu.style.display = 'none';
+            filterToggle.textContent = 'Filtra Esperienze ▼';
+        }
+    });
+
+    // Funzione filtro
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+            experienceCards.forEach(card => {
+                if(filter === 'all' || card.getAttribute('data-category') === filter){
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
 
     <!-- Footer -->
     <footer class="footer">
