@@ -100,30 +100,60 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 });
 
-// Form Validation & Submission
+// Form Validation & Submission (Formspree async)
 // ========================================
 
 const forms = document.querySelectorAll('form');
 
 forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Log data (in production, send to backend)
-        console.log('Form submitted:', data);
-        
-        // Show success notification
-        showNotification('Grazie! Ti contatterò presto.', 'success');
-        
-        // Reset form
-        this.reset();
-        
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Solo intercetta i form che puntano a Formspree
+    if (!form.action || !form.action.includes('formspree.io')) return;
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault(); // ✅ Blocca il redirect della pagina
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.textContent : '';
+
+        // Disabilita il pulsante durante l'invio
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Invio in corso...';
+        }
+
+        try {
+            const formData = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'  // ✅ Indispensabile per Formspree
+                }
+            });
+
+            if (response.ok) {
+                // ✅ Successo: mostra notifica e resetta il form
+                showNotification('Grazie! Ti contatterò presto.', 'success');
+                form.reset();
+            } else {
+                // ❌ Errore lato Formspree
+                const data = await response.json();
+                const errMsg = data.errors
+                    ? data.errors.map(err => err.message).join(', ')
+                    : 'Si è verificato un errore. Riprova più tardi.';
+                showNotification(errMsg, 'error');
+            }
+        } catch (err) {
+            // ❌ Errore di rete
+            showNotification('Errore di connessione. Controlla la tua rete e riprova.', 'error');
+        } finally {
+            // Riabilita il pulsante
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        }
     });
 });
 
