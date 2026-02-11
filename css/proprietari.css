@@ -225,7 +225,7 @@
 
 @media (max-width: 768px) {
     .hero-owners {
-        padding: 5rem 0 1rem;
+        padding: 4rem 0 0;
     }
     
     .form-row {
