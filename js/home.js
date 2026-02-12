@@ -1,6 +1,4 @@
 // Home page specific JavaScript
-<<<<<<< Updated upstream
-=======
 
 // ─── Properties Carousel ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
@@ -130,13 +128,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial setup
     cloneCards();
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 });
->>>>>>> Stashed changes
-=======
-});
->>>>>>> Stashed changes
-=======
-});
->>>>>>> Stashed changes
