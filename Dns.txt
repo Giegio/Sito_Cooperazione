@@ -1,4 +1,11 @@
+schouses.it
+
 _github-pages-challenge-Giegio
 1. Create a TXT record in your DNS configuration for the following hostname: _github-pages-challenge-Giegio.schomes.it
 2. Use this code for the value of the TXT record: ccecabf9a5e613708d4692631a86a7
 3. Wait until your DNS configuration changes. This could take up to 24 hours to propagate.
+
+schomes.it
+
+_github-pages-challenge-Giegio.schomes.it
+1a767d5ac92d68302a00156f03cc74
