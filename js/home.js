@@ -131,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial setup
     cloneCards();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+});
+>>>>>>> Stashed changes
+=======
 });
 >>>>>>> Stashed changes
 =======
