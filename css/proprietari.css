@@ -180,7 +180,7 @@
 
 .testimonials-owners .testimonial-card {
     background: #fafafa;
-    padding: 2rem;
+    padding: 0;
     border-radius: 12px;
     border-left: 4px solid #FFD700;
 }
@@ -188,7 +188,7 @@
 .testimonial-img {
     max-width: 750px;
     aspect-ratio: 16/9;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: var(--radius-md);
