@@ -359,6 +359,7 @@ body {
 .property-card {
     position: relative;
     min-height: 200px;
+    aspect-ratio: 16/9;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -386,7 +387,7 @@ body {
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.1s;
     z-index: 2;
 }
