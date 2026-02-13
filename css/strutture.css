@@ -213,5 +213,5 @@
     opacity: 1;
 }
 
-.gallery-arrow.prev { left: 10px; }
-.gallery-arrow.next { right: 10px; }
+.gallery-arrow.prev { left: 1px; }
+.gallery-arrow.next { right: 1px; }

@@ -244,8 +244,7 @@ function showNotification(message, type = 'info') {
                     transform: translateX(400px);
                     opacity: 0;
                 }
-            }
-        `;
+            }`;
         document.head.appendChild(style);
     }
     
