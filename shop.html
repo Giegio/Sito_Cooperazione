@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favico.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop e Consulenze | Sara Celentani</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pages.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXQ1V93ELZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXQ1V93ELZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-YXQ1V93ELZ');
-</script>
+        gtag('config', 'G-YXQ1V93ELZ');
+    </script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container nav-container">
@@ -43,551 +47,576 @@
         </div>
     </nav>
 
-    <section class="page-header"><div class="container"><span class="header-tag">Shop</span><h1 class="header-title">Itinerari di Viaggio</h1><p class="header-description">Guide e Budget Viaggi intorno al Mondo!</p></div></section>
+    <section class="page-header">
+        <div class="container">
+            <span class="header-tag">Shop</span>
+            <h1 class="header-title">Itinerari di Viaggio</h1>
+            <p class="header-description">Guide e Budget Viaggi intorno al Mondo!</p>
+        </div>
+    </section>
 
-<section class="shop section">
-    <div class="container">
-        <!-- FILTRO A FINESTRELLA -->
-        <div class="shop-filters text-center mb-4">
-            <button class="btn btn-outline-primary" id="filterToggle">Filtra Itinerari ▼</button>
+    <section class="shop section">
+        <div class="container">
+            <!-- FILTRO A FINESTRELLA -->
+            <div class="shop-filters text-center mb-4">
+                <button class="btn btn-outline-primary" id="filterToggle">Filtra Itinerari ▼</button>
 
-            <div id="filterMenu" style="display:none; margin-top:10px;">
-                <button class="filter-btn btn btn-outline-primary active" data-filter="all">Tutti</button>
-                <button class="filter-btn btn btn-outline-primary" data-filter="europa">Europa</button>
-                <button class="filter-btn btn btn-outline-primary" data-filter="asia">Asia</button>
-                <button class="filter-btn btn btn-outline-primary" data-filter="italia">Italia</button>
+                <div id="filterMenu" style="display:none; margin-top:10px;">
+                    <button class="filter-btn btn btn-outline-primary active" data-filter="all">Tutti</button>
+                    <button class="filter-btn btn btn-outline-primary" data-filter="europa">Europa</button>
+                    <button class="filter-btn btn btn-outline-primary" data-filter="asia">Asia</button>
+                    <button class="filter-btn btn btn-outline-primary" data-filter="italia">Italia</button>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="grid grid-3">
+                <!-- Giappone -->
+                <div class="shop-item card" data-category="asia">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/TOKYO/Tokyo1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo5.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo6.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo7.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo8.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo9.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo10.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo11.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/TOKYO/Tokyo12.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Giappone – Cultura, Divertimento e Shopping</h3>
+                        <p>3 settimane tra Osaka, Nara, Kyoto, Tokyo e Nikko. Templi, rituali, Universal Studios,
+                            Pokémon Café, Tokyo Disneyland e DisneySea. Shopping nerd sfrenato tra gadget e manga.</p>
+                        <p class="price">€15</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Europa on the Road -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/EUROPA/Europa1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa5.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa6.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa7.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa8.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa9.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/EUROPA/Europa10.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Europa On The Road – Città, Parchi e Panorami Alpini</h3>
+                        <p>2 settimane a tappe: Lione, Ginevra, Berna, Grindelwald, Zurigo, Europa Park, Strasburgo,
+                            Stoccarda, Legoland, Monaco di Baviera, Innsbruck, e Nord Italia. Città storiche, castelli,
+                            parchi a tema e panorami mozzafiato.</p>
+                        <p class="price">€15</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Irlanda -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/DUBLINO/Dublino1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/DUBLINO/Dublino2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/DUBLINO/Dublino3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/DUBLINO/Dublino4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/DUBLINO/Dublino5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Irlanda – Capodanno Celtico e Festival di Bram Stoker</h3>
+                        <p>5 giorni tra Dublino e Galway: Capodanno Celtico, festival di Bram Stoker, Scogliere di Moher
+                            e pub tradizionali.</p>
+                        <p class="price">€10</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Cina -->
+                <div class="shop-item card" data-category="asia">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/CINA/Cina1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CINA/Cina2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CINA/Cina3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CINA/Cina4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CINA/Cina5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Cina – Pechino e Xi’An</h3>
+                        <p>7 giorni tra Città Proibita, Grande Muraglia e Esercito di Terracotta. Storia, cultura e
+                            spettacoli tradizionali indimenticabili.</p>
+                        <p class="price">€10</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Croazia On The Road -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/CROAZIA/Croazia1.png')"></div>
+                        <div class="slide" style="background-image:url('img/CROAZIA/Croazia2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CROAZIA/Croazia3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/CROAZIA/Croazia4.png')"></div>
+                        <div class="slide" style="background-image:url('img/CROAZIA/Croazia5.png')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Croazia On The Road</h3>
+                        <p>7 giorni tra mare cristallino, festa e avventura lungo tutta la costa croata.</p>
+                        <p class="price">€10</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Le Capitali della Germania e Repubblica Ceca -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BERLINO/Berlino1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BERLINO/Berlino2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BERLINO/Berlino3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BERLINO/Berlino4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BERLINO/Berlino5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Le Capitali della Germania e Repubblica Ceca</h3>
+                        <p>7 giorni da Berlino a Praga, passando per Dresda. Cultura, storia e architettura imperdibile.
+                        </p>
+                        <p class="price">€8</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Spagna Andalusia -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/ANDALUSIA/Andalusia1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Spagna – Andalusia</h3>
+                        <p>4 giorni On The Road tra Siviglia, Granada, Malaga e il meraviglioso Caminito del Rey.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Spagna Barcellona e Tossa de Mar -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BARCELLONA/Barcellona1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Spagna – Barcellona e Tossa de Mar</h3>
+                        <p>7 giorni tra movida e storia di Barcellona, opere di Gaudí e relax sul mare di Tossa de Mar.
+                        </p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Spagna Madrid -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BARCELLONA/Barcellona.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Spagna – Madrid, Toledo e i Looney Tunes</h3>
+                        <p>5 Giorni alla scoperta della capitale spagnola e del favoloso borgo di Toledo con tappa al
+                            Warner Studios Park</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Malta -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/MALTA/Malta1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/MALTA/Malta2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/MALTA/Malta3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/MALTA/Malta4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/MALTA/Malta5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Malta</h3>
+                        <p>5 Giorni visitando ogni angolo dell'isola nel mediterraneo</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Francia Costa Azzurra e Provenza -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/NIZZA/Nizza1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NIZZA/Nizza2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NIZZA/Nizza3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NIZZA/Nizza4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NIZZA/Nizza5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Francia – Costa Azzurra e Provenza</h3>
+                        <p>5 Giorni alla scoperta di Nizza, Marsiglia, Avignone, Montecarlo e Sanremo, tra città
+                            storiche, mare e panorami mozzafiato.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Budapest -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BUDAPEST/Budapest1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUDAPEST/Budapest2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUDAPEST/Budapest3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUDAPEST/Budapest4.png')"></div>
+                        <div class="slide" style="background-image:url('img/BUDAPEST/Budapest5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Ungheria – Budapest</h3>
+                        <p>3 giorni nella vivace e colorata capitale ungherese, tra architettura storica, tradizioni
+                            locali e vita notturna.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Portogallo -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/PORTO/Porto1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/PORTO/Porto2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/PORTO/Porto3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/PORTO/Porto4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/PORTO/Porto5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Portogallo – Porto e Lisbona</h3>
+                        <p>5 giorni tra tradizione, panorami suggestivi e atmosfere uniche.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Belgio -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BELGIO/Bruxelles1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BELGIO/Bruxelles2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BELGIO/Bruxelles3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BELGIO/Bruxelles4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BELGIO/Bruxelles5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Belgio</h3>
+                        <p>5 giorni tra Bruxelles, Gand, Anversa e il borgo di Bruges.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Danimarca -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/COPENAGHEN/Copenaghen1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Danimarca – Copenaghen e Lego</h3>
+                        <p>5 giorni tra i colori di Copenaghen e i parchi LegoHouse e Legoland.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Austria e Slovacchia -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/AUSTRIA/Vienna1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/AUSTRIA/Vienna2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/AUSTRIA/Vienna3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/AUSTRIA/Vienna4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/AUSTRIA/Vienna5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Austria e Slovacchia – Vienna e Bratislava</h3>
+                        <p>5 giorni tra due capitali ricche di storia, cultura ed eleganza.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Romania -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/BUCHAREST/Bucharest1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Romania – Bucharest e i Castelli</h3>
+                        <p>3 giorni tra i castelli più iconici, incluso quello di Dracula, e la capitale Bucharest.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Bulgaria -->
+                <div class="shop-item card" data-category="europa">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/SOFIA/Sofia1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/SOFIA/Sofia2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/SOFIA/Sofia3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/SOFIA/Sofia4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/SOFIA/Sofia5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Bulgaria – Sofia, Rila, Plovdiv e Koprivshtitsa</h3>
+                        <p>3 giorni tra città storiche, trekking e tradizioni autentiche.</p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Italia On The Road -->
+                <div class="shop-item card" data-category="italia">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/NAPOLI/Napoli1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NAPOLI/Napoli2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NAPOLI/Napoli3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NAPOLI/Napoli4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/NAPOLI/Napoli5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Italia – Roma, Napoli e Salerno</h3>
+                        <p>10 giorni tra Reggia di Caserta, Pompei, Ercolano e Costiera Amalfitana. Storia, cultura e
+                            mare in un viaggio completo.</p>
+                        <p class="price">€8</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
+
+                <!-- Italia Cinque Terre -->
+                <div class="shop-item card" data-category="italia">
+                    <div class="property-card" data-card>
+                        <div class="slide active" style="background-image:url('img/5TERRE/5Terre1.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/5TERRE/5Terre2.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/5TERRE/5Terre3.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/5TERRE/5Terre4.jpg')"></div>
+                        <div class="slide" style="background-image:url('img/5TERRE/5Terre5.jpg')"></div>
+
+                        <button class="card-arrow prev"> ‹ </button>
+                        <button class="card-arrow next"> › </button>
+                    </div>
+                    <div class="card-body">
+                        <h3>Italia – Le Cinque Terre</h3>
+                        <p>4 giorni in treno tra i paesaggi mozzafiato delle Cinque Terre e il loro mare cristallino.
+                        </p>
+                        <p class="price">€5</p>
+                        <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <br><br>
-
-        <div class="grid grid-3">
-            <!-- Giappone -->
-            <div class="shop-item card" data-category="asia">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/TOKYO/Tokyo1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo5.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo6.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo7.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo8.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo9.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo10.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo11.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/TOKYO/Tokyo12.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Giappone – Cultura, Divertimento e Shopping</h3>
-                    <p>3 settimane tra Osaka, Nara, Kyoto, Tokyo e Nikko. Templi, rituali, Universal Studios, Pokémon Café, Tokyo Disneyland e DisneySea. Shopping nerd sfrenato tra gadget e manga.</p>
-                    <p class="price">€15</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Europa on the Road -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/EUROPA/Europa1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa5.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa6.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa7.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa8.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa9.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/EUROPA/Europa10.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Europa On The Road – Città, Parchi e Panorami Alpini</h3>
-                    <p>2 settimane a tappe: Lione, Ginevra, Berna, Grindelwald, Zurigo, Europa Park, Strasburgo, Stoccarda, Legoland, Monaco di Baviera, Innsbruck, e Nord Italia. Città storiche, castelli, parchi a tema e panorami mozzafiato.</p>
-                    <p class="price">€15</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Irlanda -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/DUBLINO/Dublino1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/DUBLINO/Dublino2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/DUBLINO/Dublino3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/DUBLINO/Dublino4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/DUBLINO/Dublino5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Irlanda – Capodanno Celtico e Festival di Bram Stoker</h3>
-                    <p>5 giorni tra Dublino e Galway: Capodanno Celtico, festival di Bram Stoker, Scogliere di Moher e pub tradizionali.</p>
-                    <p class="price">€10</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Cina -->
-            <div class="shop-item card" data-category="asia">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/CINA/Cina1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CINA/Cina2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CINA/Cina3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CINA/Cina4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CINA/Cina5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Cina – Pechino e Xi’An</h3>
-                    <p>7 giorni tra Città Proibita, Grande Muraglia e Esercito di Terracotta. Storia, cultura e spettacoli tradizionali indimenticabili.</p>
-                    <p class="price">€10</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Croazia On The Road -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/CROAZIA/Croazia1.png')"></div>
-                    <div class="slide" style="background-image:url('img/CROAZIA/Croazia2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CROAZIA/Croazia3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/CROAZIA/Croazia4.png')"></div>
-                    <div class="slide" style="background-image:url('img/CROAZIA/Croazia5.png')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Croazia On The Road</h3>
-                    <p>7 giorni tra mare cristallino, festa e avventura lungo tutta la costa croata.</p>
-                    <p class="price">€10</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Le Capitali della Germania e Repubblica Ceca -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BERLINO/Berlino1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BERLINO/Berlino2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BERLINO/Berlino3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BERLINO/Berlino4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BERLINO/Berlino5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Le Capitali della Germania e Repubblica Ceca</h3>
-                    <p>7 giorni da Berlino a Praga, passando per Dresda. Cultura, storia e architettura imperdibile.</p>
-                    <p class="price">€8</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Spagna Andalusia -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/ANDALUSIA/Andalusia1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/ANDALUSIA/Andalusia5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Spagna – Andalusia</h3>
-                    <p>4 giorni On The Road tra Siviglia, Granada, Malaga e il meraviglioso Caminito del Rey.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Spagna Barcellona e Tossa de Mar -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BARCELLONA/Barcellona1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Spagna – Barcellona e Tossa de Mar</h3>
-                    <p>7 giorni tra movida e storia di Barcellona, opere di Gaudí e relax sul mare di Tossa de Mar.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Spagna Madrid -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BARCELLONA/Barcellona.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BARCELLONA/Barcellona5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Spagna – Madrid, Toledo e i Looney Tunes</h3>
-                    <p>5 Giorni alla scoperta della capitale spagnola e del favoloso borgo di Toledo con tappa al Warner Studios Park</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Malta -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/MALTA/Malta1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/MALTA/Malta2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/MALTA/Malta3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/MALTA/Malta4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/MALTA/Malta5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Malta</h3>
-                    <p>5 Giorni visitando ogni angolo dell'isola nel mediterraneo</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Francia Costa Azzurra e Provenza -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/NIZZA/Nizza1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NIZZA/Nizza2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NIZZA/Nizza3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NIZZA/Nizza4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NIZZA/Nizza5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Francia – Costa Azzurra e Provenza</h3>
-                    <p>5 Giorni alla scoperta di Nizza, Marsiglia, Avignone, Montecarlo e Sanremo, tra città storiche, mare e panorami mozzafiato.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Budapest -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BUDAPEST/Budapest1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUDAPEST/Budapest2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUDAPEST/Budapest3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUDAPEST/Budapest4.png')"></div>
-                    <div class="slide" style="background-image:url('img/BUDAPEST/Budapest5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Ungheria – Budapest</h3>
-                    <p>3 giorni nella vivace e colorata capitale ungherese, tra architettura storica, tradizioni locali e vita notturna.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Portogallo -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/PORTO/Porto1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/PORTO/Porto2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/PORTO/Porto3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/PORTO/Porto4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/PORTO/Porto5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Portogallo – Porto e Lisbona</h3>
-                    <p>5 giorni tra tradizione, panorami suggestivi e atmosfere uniche.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Belgio -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BELGIO/Bruxelles1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BELGIO/Bruxelles2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BELGIO/Bruxelles3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BELGIO/Bruxelles4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BELGIO/Bruxelles5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Belgio</h3>
-                    <p>5 giorni tra Bruxelles, Gand, Anversa e il borgo di Bruges.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Danimarca -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/COPENAGHEN/Copenaghen1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/COPENAGHEN/Copenaghen5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Danimarca – Copenaghen e Lego</h3>
-                    <p>5 giorni tra i colori di Copenaghen e i parchi LegoHouse e Legoland.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Austria e Slovacchia -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/AUSTRIA/Vienna1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/AUSTRIA/Vienna2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/AUSTRIA/Vienna3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/AUSTRIA/Vienna4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/AUSTRIA/Vienna5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Austria e Slovacchia – Vienna e Bratislava</h3>
-                    <p>5 giorni tra due capitali ricche di storia, cultura ed eleganza.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Romania -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/BUCHAREST/Bucharest1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/BUCHAREST/Bucharest5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Romania – Bucharest e i Castelli</h3>
-                    <p>3 giorni tra i castelli più iconici, incluso quello di Dracula, e la capitale Bucharest.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Bulgaria -->
-            <div class="shop-item card" data-category="europa">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/SOFIA/Sofia1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/SOFIA/Sofia2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/SOFIA/Sofia3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/SOFIA/Sofia4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/SOFIA/Sofia5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Bulgaria – Sofia, Rila, Plovdiv e Koprivshtitsa</h3>
-                    <p>3 giorni tra città storiche, trekking e tradizioni autentiche.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Italia On The Road -->
-            <div class="shop-item card" data-category="italia">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/NAPOLI/Napoli1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NAPOLI/Napoli2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NAPOLI/Napoli3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NAPOLI/Napoli4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/NAPOLI/Napoli5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Italia – Roma, Napoli e Salerno</h3>
-                    <p>10 giorni tra Reggia di Caserta, Pompei, Ercolano e Costiera Amalfitana. Storia, cultura e mare in un viaggio completo.</p>
-                    <p class="price">€8</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-
-            <!-- Italia Cinque Terre -->
-            <div class="shop-item card" data-category="italia">
-                <div class="property-card" data-card>
-                    <div class="slide active" style="background-image:url('img/5TERRE/5Terre1.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/5TERRE/5Terre2.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/5TERRE/5Terre3.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/5TERRE/5Terre4.jpg')"></div>
-                    <div class="slide" style="background-image:url('img/5TERRE/5Terre5.jpg')"></div>
-
-                    <button class="card-arrow prev"> ‹ </button>
-                    <button class="card-arrow next"> › </button>
-                </div>
-                <div class="card-body">
-                    <h3>Italia – Le Cinque Terre</h3>
-                    <p>4 giorni in treno tra i paesaggi mozzafiato delle Cinque Terre e il loro mare cristallino.</p>
-                    <p class="price">€5</p>
-                    <a href="contatti.html" class="btn btn-primary btn-full">Acquista</a>
-                </div>
-            </div>
-        </div>
+    <div class="shop-cta section-sm text-center bg-primary" style="padding:3rem;border-radius:12px;margin-top:4rem;">
+        <h2>Hai Bisogno di Aiuto?</h2>
+        <p class="lead">Contattami per ricevere consigli personalizzati sulla tua prossima Avventura!</p>
+        <a href="contatti.html" class="btn btn-secondary btn-lg">Contattami</a>
     </div>
-</section>
 
-<div class="shop-cta section-sm text-center bg-primary" style="padding:3rem;border-radius:12px;margin-top:4rem;">
-    <h2>Hai Bisogno di Aiuto?</h2>
-    <p class="lead">Contattami per ricevere consigli personalizzati sulla tua prossima Avventura!</p>
-    <a href="contatti.html" class="btn btn-secondary btn-lg">Contattami</a>
-</div>
+    <!-- SCRIPT FILTRI A FINESTRELLA -->
+    <script>
+        const filterToggle = document.getElementById('filterToggle');
+        const filterMenu = document.getElementById('filterMenu');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const experienceCards = document.querySelectorAll('.shop-item'); // CORRETTO
 
-<!-- SCRIPT FILTRI A FINESTRELLA -->
-<script>
-    const filterToggle = document.getElementById('filterToggle');
-    const filterMenu = document.getElementById('filterMenu');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const experienceCards = document.querySelectorAll('.shop-item'); // CORRETTO
+        // Mostra / nascondi menu
+        filterToggle.addEventListener('click', () => {
+            if (filterMenu.style.display === 'none') {
+                filterMenu.style.display = 'block';
+                filterToggle.textContent = 'Filtra Itinerari ▲';
+            } else {
+                filterMenu.style.display = 'none';
+                filterToggle.textContent = 'Filtra Itinerari ▼';
+            }
+        });
 
-    // Mostra / nascondi menu
-    filterToggle.addEventListener('click', () => {
-        if (filterMenu.style.display === 'none') {
-            filterMenu.style.display = 'block';
-            filterToggle.textContent = 'Filtra Itinerari ▲';
-        } else {
-            filterMenu.style.display = 'none';
-            filterToggle.textContent = 'Filtra Itinerari ▼';
-        }
-    });
+        // Funzione filtro
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-    // Funzione filtro
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
 
-            const filter = btn.getAttribute('data-filter');
-
-            experienceCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                experienceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon" style="background-image:url('img/LOGOSARA.jpg')"></div>
-                        <div class="logo-text">
-                            <div class="logo-name">Sara Celentani</div>
-                            <div class="logo-subtitle">Property Manager</div>
-                        </div>
-                    </div>
-                    <p class="footer-description">
-                        Trasformo immobili in esperienze memorabili e rendimenti di successo. Gestione completa e servizi personalizzati per ospiti e proprietari, con cura, professionalità e risultati garantiti.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/schomes.it" target="_blank" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/schomes" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://wa.me/393311250968" target="_blank" class="social-link" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Servizi</h4>
-                    <div class="footer-links">
-                        <a href="strutture.html">Le Mie Strutture</a>
-                        <a href="esperienze.html">Esperienze</a>
-                        <a href="shop.html">Shop</a>
-                        <a href="proprietari.html">Sei un Proprietario?</a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Informazioni</h4>
-                    <div class="footer-links">
-                        <a href="chi-sono.html">Chi Sono</a>
-                        <a href="contatti.html">Contatti</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contatti</h4>
-                    <div class="footer-contact">
-                        <p>📧 sara.celentani@gmail.com</p>
-                        <p>📱 +39 331 125 0968</p>
-                        <p>📍 Via U. Terracini n.22/N<br>
-                        Campi Bisenzio 50013 - Firenze</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Sara Celentani Property Manager. Tutti i diritti riservati.</p>
-                <p class="footer-legal">P.IVA: 07517410481 | SDI: M5UXCR1</p>
-            </div>
-        </div>
-    </footer>
     <script src="js/main.js"></script>
 </body>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon" style="background-image:url('img/LOGOSARA.jpg')"></div>
+                    <div class="logo-text">
+                        <div class="logo-name">Sara Celentani</div>
+                        <div class="logo-subtitle">Property Manager</div>
+                    </div>
+                </div>
+                <p class="footer-description">
+                    Trasformo case in esperienze e immobili in investimenti di successo. Gestione completa e servizi
+                    personalizzati per ospiti e proprietari, con cura, professionalità e risultati garantiti.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/schomes.it" target="_blank" class="social-link"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/schomes" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/393311250968" target="_blank" class="social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Servizi</h4>
+                <div class="footer-links">
+                    <a href="strutture.html">Le Mie Strutture</a>
+                    <a href="esperienze.html">Esperienze</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="proprietari.html">Sei un Proprietario?</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Informazioni</h4>
+                <div class="footer-links">
+                    <a href="chi-sono.html">Chi Sono</a>
+                    <a href="contatti.html">Contatti</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contatti</h4>
+                <div class="footer-contact">
+                    <p>📧 <a href="mailto:sara.celentani@gmail.com" class="__cf_email__">sara.celentani@gmail.com</a>
+                    </p>
+                    <p>📱 <a href="https://wa.me/393311250968" target="_blank"> +39 331 125 0968</a></p>
+                    <p>📍 Via U. Terracini n.22/N<br>
+                        Campi Bisenzio 50013 - Firenze</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sara Celentani Property Manager. Tutti i diritti riservati.</p>
+            <p class="footer-legal">P.IVA: 07517410481 | SDI: M5UXCR1</p>
+        </div>
+    </div>
+</footer>
+
 </html>
