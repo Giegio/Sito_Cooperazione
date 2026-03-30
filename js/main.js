@@ -29,8 +29,8 @@ navLinks.forEach(link => {
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (navMenu.classList.contains('active') && 
-        !navMenu.contains(e.target) && 
+    if (navMenu.classList.contains('active') &&
+        !navMenu.contains(e.target) &&
         !hamburger.contains(e.target)) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
@@ -57,15 +57,15 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        
+
         if (href === '#') return;
-        
+
         e.preventDefault();
         const target = document.querySelector(href);
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-            
+
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
         '.service-card, .property-card, .vantaggio-card, .card, .testimonial-card, .stat-box, .experience-card'
     );
-    
+
     animatedElements.forEach(el => observer.observe(el));
 });
 
@@ -109,7 +109,7 @@ forms.forEach(form => {
     // Solo intercetta i form che puntano a Formspree
     if (!form.action || !form.action.includes('formspree.io')) return;
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault(); // ✅ Blocca il redirect della pagina
 
         const submitBtn = form.querySelector('button[type="submit"]');
@@ -166,23 +166,23 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
-    
+
     // Set notification colors based on type
     const colors = {
         success: '#FFD700',
         error: '#D4AF37',
         info: '#FFC300'
     };
-    
+
     notification.innerHTML = `
         <span class="notification-text">${message}</span>
         <button class="notification-close">&times;</button>
     `;
-    
+
     // Add styles
     Object.assign(notification.style, {
         position: 'fixed',
@@ -202,14 +202,14 @@ function showNotification(message, type = 'info') {
         gap: '1rem',
         maxWidth: '400px'
     });
-    
+
     // Add close button functionality
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.style.animation = 'slideOutRight 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     });
-    
+
     Object.assign(closeBtn.style, {
         background: 'none',
         border: 'none',
@@ -219,7 +219,7 @@ function showNotification(message, type = 'info') {
         lineHeight: '1',
         color: '#1a1a1a'
     });
-    
+
     // Add animation keyframes if not already added
     if (!document.querySelector('#notificationStyles')) {
         const style = document.createElement('style');
@@ -247,10 +247,10 @@ function showNotification(message, type = 'info') {
             }`;
         document.head.appendChild(style);
     }
-    
+
     // Append to body
     document.body.appendChild(notification);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         notification.style.animation = 'slideOutRight 0.3s ease';
@@ -262,21 +262,21 @@ function showNotification(message, type = 'info') {
 // ========================================
 
 document.querySelectorAll('.form-control').forEach(input => {
-    input.addEventListener('focus', function() {
+    input.addEventListener('focus', function () {
         this.parentElement.classList.add('focused');
     });
-    
-    input.addEventListener('blur', function() {
+
+    input.addEventListener('blur', function () {
         this.parentElement.classList.remove('focused');
-        
+
         if (this.hasAttribute('required') && !this.value) {
             this.style.borderColor = '#D4AF37';
         } else if (this.value) {
             this.style.borderColor = '#FFD700';
         }
     });
-    
-    input.addEventListener('input', function() {
+
+    input.addEventListener('input', function () {
         if (this.style.borderColor) {
             this.style.borderColor = '';
         }
@@ -306,7 +306,7 @@ function createBackToTop() {
     button.className = 'back-to-top';
     button.innerHTML = '↑';
     button.setAttribute('aria-label', 'Torna su');
-    
+
     Object.assign(button.style, {
         position: 'fixed',
         bottom: '30px',
@@ -325,11 +325,11 @@ function createBackToTop() {
         transition: 'all 0.3s ease',
         boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
     });
-    
+
     button.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    
+
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 500) {
             button.style.opacity = '1';
@@ -339,7 +339,7 @@ function createBackToTop() {
             button.style.visibility = 'hidden';
         }
     });
-    
+
     document.body.appendChild(button);
 }
 
@@ -369,51 +369,53 @@ window.addEventListener('load', () => {
 
 // Prevent FOUC (Flash of Unstyled Content)
 // ========================================
+function initGalleries() {
+    document.documentElement.style.visibility = 'visible';
 
-document.documentElement.style.visibility = 'visible';
+    document.querySelectorAll('[data-gallery]').forEach(gallery => {
+        const slides = gallery.querySelectorAll('.slide');
+        const prev = gallery.querySelector('.prev');
+        const next = gallery.querySelector('.next');
+        let index = 0;
+        let interval;
 
-document.querySelectorAll('[data-gallery]').forEach(gallery => {
-    const slides = gallery.querySelectorAll('.slide');
-    const prev = gallery.querySelector('.prev');
-    const next = gallery.querySelector('.next');
-    let index = 0;
-    let interval;
+        const showSlide = i => {
+            slides[index].classList.remove('active');
+            index = (i + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        };
 
-    const showSlide = i => {
-        slides[index].classList.remove('active');
-        index = (i + slides.length) % slides.length;
-        slides[index].classList.add('active');
-    };
+        const startAuto = () => {
+            interval = setInterval(() => showSlide(index + 1), 4000);
+        };
 
-    const startAuto = () => {
-        interval = setInterval(() => showSlide(index + 1), 4000);
-    };
+        const stopAuto = () => clearInterval(interval);
 
-    const stopAuto = () => clearInterval(interval);
+        next.addEventListener('click', () => showSlide(index + 1));
+        prev.addEventListener('click', () => showSlide(index - 1));
 
-    next.addEventListener('click', () => showSlide(index + 1));
-    prev.addEventListener('click', () => showSlide(index - 1));
+        gallery.addEventListener('mouseenter', stopAuto);
+        gallery.addEventListener('mouseleave', startAuto);
 
-    gallery.addEventListener('mouseenter', stopAuto);
-    gallery.addEventListener('mouseleave', startAuto);
-
-    startAuto();
-});
+        startAuto();
+    });
 
 
-document.querySelectorAll('[data-card]').forEach(gallery => {
-    const slides = gallery.querySelectorAll('.slide');
-    const prev = gallery.querySelector('.prev');
-    const next = gallery.querySelector('.next');
-    let index = 0;
-    let interval;
+    document.querySelectorAll('[data-card]').forEach(gallery => {
+        const slides = gallery.querySelectorAll('.slide');
+        const prev = gallery.querySelector('.prev');
+        const next = gallery.querySelector('.next');
+        let index = 0;
+        let interval;
 
-    const showSlide = i => {
-        slides[index].classList.remove('active');
-        index = (i + slides.length) % slides.length;
-        slides[index].classList.add('active');
-    };
+        const showSlide = i => {
+            slides[index].classList.remove('active');
+            index = (i + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        };
 
-    next.addEventListener('click', () => showSlide(index + 1));
-    prev.addEventListener('click', () => showSlide(index - 1));
-});
+        next.addEventListener('click', () => showSlide(index + 1));
+        prev.addEventListener('click', () => showSlide(index - 1));
+    });
+}
+initGalleries();

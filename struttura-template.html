@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../img/favico.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO — compilato dinamicamente da strutture-data.js -->
+  <title id="page-title">Struttura | Sara Celentani Property Manager</title>
+  <meta name="description" id="page-description" content="">
+
+  <!-- Open Graph (per condivisioni social) -->
+  <meta property="og:title" id="og-title" content="">
+  <meta property="og:description" id="og-description" content="">
+  <meta property="og:image" id="og-image" content="">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Styles — percorsi relativi dalla sottocartella /strutture/ -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/strutture.css">
+  <link rel="stylesheet" href="../css/struttura-detail.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXQ1V93ELZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-YXQ1V93ELZ');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon" style="background-image:url('../img/LOGOSARA.jpg')"></div>
+        <div class="logo-text">
+          <div class="logo-name">Sara Celentani</div>
+          <div class="logo-subtitle">Property Manager</div>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chi-sono.html" class="nav-link">Chi Sono</a></li>
+        <li><a href="../strutture.html" class="nav-link active">Le Mie Strutture</a></li>
+        <li><a href="../esperienze.html" class="nav-link">Esperienze</a></li>
+        <li><a href="../shop.html" class="nav-link">Shop</a></li>
+        <li><a href="../contatti.html" class="nav-link">Contatti</a></li>
+        <li><a href="../proprietari.html" class="nav-link btn-nav">Sei un Proprietario?</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../strutture.html">Le Mie Strutture</a>
+        <span class="bc-sep">›</span>
+        <span id="bc-current">—</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Gallery -->
+  <section class="detail-hero" id="detail-hero">
+    <div class="hero-gallery-grid" id="hero-gallery-grid">
+      <!-- Compilato da JS -->
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="detail-layout container">
+
+    <!-- Left: Info -->
+    <main class="detail-main">
+
+      <!-- Header struttura -->
+      <div class="detail-header">
+        <div class="detail-badges" id="detail-badges"></div>
+        <h1 class="detail-nome" id="detail-nome">—</h1>
+        <a class="detail-location" id="detail-location" href="#" target="_blank">📍 —</a>
+      </div>
+
+      <!-- Descrizione -->
+      <div class="detail-descrizione" id="detail-descrizione"></div>
+
+      <!-- Amenities -->
+      <div class="detail-amenities">
+        <h2>Servizi & Comfort</h2>
+        <div class="amenities-grid" id="detail-amenities-grid"></div>
+      </div>
+
+      <!-- Mappa embed -->
+      <div class="detail-map">
+        <h2>Dove si trova</h2>
+        <div class="map-placeholder" id="map-placeholder">
+          <a id="map-link" href="#" target="_blank" class="btn btn-outline">
+            📍 Apri in Google Maps
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Right: Sidebar prenotazione -->
+    <aside class="detail-sidebar">
+      <div class="booking-card" id="booking-card">
+        <h3 id="sidebar-nome">—</h3>
+        <p id="sidebar-location" class="sidebar-loc"></p>
+
+        <div class="booking-links" id="booking-links"></div>
+
+        <a href="../contatti.html" class="btn btn-primary btn-full">
+          ✉️ Richiedi Disponibilità
+        </a>
+
+        <div class="booking-note">
+          <i class="fas fa-shield-alt"></i>
+          Risposta garantita entro 24h
+        </div>
+      </div>
+
+      <!-- Altre strutture -->
+      <div class="related-section">
+        <h3>Altre Strutture</h3>
+        <div id="related-cards"></div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner section bg-primary">
+    <div class="container">
+      <div class="cta-banner-content">
+        <h2>Hai Bisogno di Più Informazioni?</h2>
+        <p>Contattami per scoprire disponibilità, prezzi e servizi extra personalizzati!</p>
+        <a href="../contatti.html" class="btn btn-secondary btn-lg">Contattami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon" style="background-image:url('../img/LOGOSARA.jpg')"></div>
+            <div class="logo-text">
+              <div class="logo-name">Sara Celentani</div>
+              <div class="logo-subtitle">Property Manager</div>
+            </div>
+          </div>
+          <p class="footer-description">
+            Trasformo case in esperienze e immobili in investimenti di successo. Gestione completa e servizi
+            personalizzati per ospiti e proprietari, con cura, professionalità e risultati garantiti.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/schomes.it" target="_blank" class="social-link" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/SCpropertyexpert/" target="_blank" class="social-link"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/schomes" target="_blank" class="social-link" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/393311250968" target="_blank" class="social-link" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Servizi</h4>
+          <div class="footer-links">
+            <a href="../strutture.html">Le Mie Strutture</a>
+            <a href="../esperienze.html">Esperienze</a>
+            <a href="../shop.html">Shop</a>
+            <a href="../proprietari.html">Sei un Proprietario?</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Informazioni</h4>
+          <div class="footer-links">
+            <a href="../chi-sono.html">Chi Sono</a>
+            <a href="../contatti.html">Contatti</a>
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../cookies.html">Cookie Policy</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Contatti</h4>
+          <div class="footer-contact">
+            <p>📧 <a href="mailto:sara.celentani@gmail.com">sara.celentani@gmail.com</a></p>
+            <p>📱 <a href="https://wa.me/393311250968" target="_blank">+39 331 125 0968</a></p>
+            <p>📍 Via U. Terracini n.22/N<br>Campi Bisenzio 50013 - Firenze</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sara Celentani Property Manager. Tutti i diritti riservati.</p>
+        <p class="footer-legal">P.IVA: 07517410481 | SDI: M5UXCR1</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- 1. Prima il data file (dalla root del sito) -->
+  <script src="../js/strutture-data.js"></script>
+  <!-- 2. Poi il main.js per navbar/hamburger -->
+  <script src="../js/main.js"></script>
+  <!-- 3. Infine il JS specifico della pagina dettaglio -->
+  <script>
+    /**
+     * Legge lo slug dall'URL (es. /strutture/midori-house-florence.html → "midori-house-florence")
+     * e popola la pagina con i dati da STRUTTURE[]
+     */
+    (function () {
+      const slug = window.location.pathname
+        .split('/')
+        .pop()
+        .replace('.html', '');
+
+      const struttura = STRUTTURE.find(s => s.slug === slug);
+
+      if (!struttura) {
+        document.querySelector('.detail-main').innerHTML =
+          '<p style="padding:4rem;text-align:center">Struttura non trovata. <a href="../strutture.html">Torna alle strutture</a></p>';
+        return;
+      }
+
+      // ── SEO ──────────────────────────────────────────────────
+      document.getElementById('page-title').textContent =
+        `${struttura.nome} | Sara Celentani Property Manager`;
+      document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
+      document.getElementById('og-title').setAttribute('content', struttura.nome);
+      document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
+      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+
+      // ── Breadcrumb ────────────────────────────────────────────
+      document.getElementById('bc-current').textContent = struttura.nome;
+
+      // ── Hero Gallery Grid ─────────────────────────────────────
+      const grid = document.getElementById('hero-gallery-grid');
+      const maxHero = Math.min(struttura.gallery.length, 5);
+      grid.innerHTML = struttura.gallery.slice(0, maxHero).map((img, i) => `
+        <div class="hero-img ${i === 0 ? 'hero-img-main' : ''}"
+             style="background-image:url('../${img}')"
+             onclick="openLightbox(${i})"></div>
+      `).join('');
+
+      // Lightbox semplice
+      window._galleryImgs = struttura.gallery.map(img => '../' + img);
+      window._currentImg = 0;
+      window.openLightbox = function (idx) {
+        window._currentImg = idx;
+        lb.style.display = 'flex';
+        lbImg.style.backgroundImage = `url('${window._galleryImgs[idx]}')`;
+        lbCount.textContent = `${idx + 1} / ${window._galleryImgs.length}`;
+      };
+
+      const lb = document.createElement('div');
+      lb.id = 'lightbox';
+      lb.innerHTML = `
+        <div class="lb-backdrop" onclick="this.parentElement.style.display='none'"></div>
+        <div class="lb-content">
+          <div class="lb-img" id="lb-img"></div>
+          <div class="lb-controls">
+            <button onclick="openLightbox((window._currentImg-1+window._galleryImgs.length)%window._galleryImgs.length)">‹</button>
+            <span id="lb-count"></span>
+            <button onclick="openLightbox((window._currentImg+1)%window._galleryImgs.length)">›</button>
+          </div>
+          <button class="lb-close" onclick="document.getElementById('lightbox').style.display='none'">✕</button>
+        </div>
+      `;
+      document.body.appendChild(lb);
+      const lbImg = document.getElementById('lb-img');
+      const lbCount = document.getElementById('lb-count');
+
+      // ── Header ────────────────────────────────────────────────
+      document.getElementById('detail-badges').innerHTML =
+        `<span class="property-badge">${struttura.badge}</span>
+         <span class="property-badge mq-badge">📐 ${struttura.mq} m²</span>`;
+      document.getElementById('detail-nome').textContent = struttura.nome;
+      const locEl = document.getElementById('detail-location');
+      locEl.textContent = `📍 ${struttura.location}`;
+      locEl.href = struttura.mapsUrl;
+
+      // ── Descrizione ───────────────────────────────────────────
+      document.getElementById('detail-descrizione').innerHTML =
+        struttura.descrizione.map(p => `<p>${p}</p>`).join('');
+
+      // ── Amenities ─────────────────────────────────────────────
+      document.getElementById('detail-amenities-grid').innerHTML =
+        struttura.amenities.map(a => `
+          <div class="amenity">
+            <span class="amenity-icon">${a.icon}</span>
+            <span>${a.label}</span>
+          </div>
+        `).join('');
+
+      // ── Mappa ─────────────────────────────────────────────────
+      document.getElementById('map-link').href = struttura.mapsUrl;
+
+      // ── Sidebar ───────────────────────────────────────────────
+      document.getElementById('sidebar-nome').textContent = struttura.nome;
+      document.getElementById('sidebar-location').textContent = `📍 ${struttura.location}`;
+      document.getElementById('booking-links').innerHTML = `
+        <a href="${struttura.airbnb}" target="_blank" class="btn btn-outline btn-full">
+          <i class="fab fa-airbnb"></i> Prenota su Airbnb
+        </a>
+        <a href="${struttura.booking}" target="_blank" class="btn btn-outline btn-full">
+          🏨 Prenota su Booking.com
+        </a>
+      `;
+
+      // ── Strutture correlate ───────────────────────────────────
+      renderRelatedCards('related-cards', struttura.slug);
+
+    })();
+  </script>
+
+</body>
+
+</html>

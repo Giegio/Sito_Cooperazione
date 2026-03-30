@@ -162,103 +162,8 @@
                 <button class="carousel-btn carousel-btn-prev" id="propPrev" aria-label="Precedente">&#8249;</button>
 
                 <div class="carousel-track-wrapper">
-                    <div class="carousel-track" id="propTrack">
-                        <div class="property-card card">
-                            <a href="strutture.html#midori">
-                                <div class="property-img" style="background-image: url('img/Midori.png');"></div>
-                                <div class="card-body">
-                                    <h3 class="card-title">Midori House Florence</h3>
-                                    <p class="property-location">📍 Campi Bisenzio, Firenze, Toscana</p>
-                                    <p class="card-text">Elegante e moderno appartamento di 55 m², arredato in modo
-                                        accogliente e funzionale, ideale per viaggiatori di tutto il mondo. <br> Situato
-                                        in una zona tranquilla e sicura, vicino a servizi, trasporti, ristoranti (anche
-                                        gluten free) e centri benessere. <br> Parcheggio gratuito nelle vicinanze.</p>
-                                    <div class="property-features">
-                                        <span class="feature-tag">Intero Appartamento</span>
-                                        <span class="feature-tag">Parcheggio Gratuito</span>
-                                        <span class="feature-tag">Vista sulle montagne fiorentine</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="strutture.html#midori" class="btn btn-outline btn-sm">Scopri di più</a>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="property-card card">
-                            <a href="strutture.html#santo-stefano">
-                                <div class="property-img"
-                                    style="background-image: url(img/SantoStefano.jpeg); height: 250px;"></div>
-                                <div class="card-body">
-                                    <h3 class="card-title">Santo Stefano</h3>
-                                    <p class="property-location">📍 Campi Bisenzio, Firenze, Toscana</p>
-                                    <p class="card-text">Splendido appartamento di 92 m² su due piani, elegante e
-                                        moderno, con suggestive tracce storiche. <br> Dalla sua posizione si gode una
-                                        vista incantevole sul castello medievale “Rocca Strozzi”, sul fiume Bisenzio,
-                                        sul ponte, sul centro storico e sulle montagne toscane.<br></p>
-                                    <div class="property-features">
-                                        <span class="feature-tag">Intero Appartamento</span>
-                                        <span class="feature-tag">Parcheggio gratuito</span>
-                                        <span class="feature-tag">Vista sul centro storico e sul castello
-                                            medievale</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="strutture.html#santo-stefano" class="btn btn-outline btn-sm">Scopri di
-                                        più</a>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="property-card card">
-                            <a href="strutture.html#tokei">
-                                <div class="property-image-main" style="background-image: url('img/Togliatti.png');">
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">Tokei Togliatti</h3>
-                                    <p class="property-location">📍 Campi Bisenzio, Firenze, Toscana</p>
-                                    <p class="card-text">Elegante e moderno appartamento di 58 m², arredato con gusto e
-                                        funzionalità, perfetto per viaggiatori internazionali. <br>Situato in una zona
-                                        tranquilla e sicura, con fermata bus per il centro di Firenze, vicino a
-                                        stazioni, autostrada, servizi e negozi. Parcheggio gratuito di fronte casa.</p>
-                                    <div class="property-features">
-                                        <span class="feature-tag">Intero Appartamento</span>
-                                        <span class="feature-tag">Parcheggio gratuito</span>
-                                        <span class="feature-tag">Smart TV e WiFi Alta Velocità</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="strutture.html#tokei" class="btn btn-outline btn-sm">Scopri di più</a>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="property-card card">
-                            <a href="strutture.html#libertà">
-
-                                <div class="property-img"
-                                    style="background-image: url(img/SantoStefano.jpeg); height: 250px;"></div>
-                                <div class="card-body">
-                                    <h3 class="card-title">Piazza Libertà Firenze</h3>
-                                    <p class="property-location">📍 Piazza della Libertà, Firenze, Toscana</p>
-                                    <p class="card-text">Splendido appartamento di 92 m² su due piani, elegante e
-                                        moderno, con suggestive tracce storiche. <br> Dalla sua posizione si gode una
-                                        vista incantevole sul castello medievale “Rocca Strozzi”, sul fiume Bisenzio,
-                                        sul ponte, sul centro storico e sulle montagne toscane.<br></p>
-                                    <div class="property-features">
-                                        <span class="feature-tag">Intero Appartamento</span>
-                                        <span class="feature-tag">Parcheggio gratuito</span>
-                                        <span class="feature-tag">Vista sul centro storico e sul castello
-                                            medievale</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="strutture.html#santo-stefano" class="btn btn-outline btn-sm">Scopri di
-                                        più</a>
-                                </div>
-                            </a>
-                        </div>
-
+                    <div class="carousel-track" id="prop-track-container">
+                        <!-- Le card delle strutture saranno generate dinamicamente da JavaScript -->
                     </div><!-- /.carousel-track -->
                 </div><!-- /.carousel-track-wrapper -->
 
@@ -353,7 +258,14 @@
     </section>
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/strutture-data.js"></script>
+    <script>
+        renderPropertyCards('prop-track-container'); // tutte le strutture
+        initGalleries(); // tutte le gallerie
+        initCarousel();
+    </script>
 </body>
+
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
