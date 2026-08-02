@@ -14,15 +14,16 @@
     gap: 3rem;
     align-items: start;
 }
-
 .hero-overlay-img {
     width: 100%;
-    height: 850px;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
-
 .hero-tag {
     color: #1a1a1a;
     font-weight: 600;
