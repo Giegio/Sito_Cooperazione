@@ -10,6 +10,7 @@
  */
 
 const STRUTTURE = [
+  //Midori House Florence
   {
     id: "midori",                              // ID univoco (usato per anchor e URL)
     slug: "midori-house-florence",             // URL della pagina dettaglio
@@ -17,7 +18,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 4 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/5DfsAddZxSmMHhjY9",
-    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
+    cin: "IT048006B4377Y7GVF",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 55,
     imgCover: "img/Midori.jpg",               // Immagine principale (card e hero)
     gallery: [                                 // Tutte le immagini dello slider
@@ -47,6 +48,7 @@ const STRUTTURE = [
     airbnb: "https://www.airbnb.it/h/midorihouseflorence",
     booking: "https://www.booking.com/Share-zG6cM3",
   },
+  //Tokei Togliatti
   {
     id: "tokei",
     slug: "tokei-togliatti",
@@ -54,7 +56,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 5 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/FA8NgYUmkqcZCSjq6",
-    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
+    cin: "IT048006B43F6D6ABU",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 58,
     imgCover: "img/Togliatti.jpeg",
     gallery: [
@@ -84,6 +86,7 @@ const STRUTTURE = [
     airbnb: "https://airbnb.it/h/tokeitogliatti",
     booking: "https://www.booking.com/Share-wQpdRAa",
   },
+  //Libertà Firenze
   {
     id: "liberta",
     slug: "piazza-liberta-firenze",
@@ -91,7 +94,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 8 Ospiti",
     location: "Piazza della Libertà, Firenze, Toscana",
     mapsUrl: "https://share.google/cJhnM6vR1uyh9ezx9",
-    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
+    cin: "IT048017C2EAJQJYH2",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 95,
     imgCover: "img/LIBERTA/liberta.jpeg",              // ← Sostituire con img reale
     gallery: [
@@ -124,6 +127,7 @@ const STRUTTURE = [
     airbnb: "https://airbnb.it/h/piercapponi",   // ← Sostituire con link reale
     booking: "https://www.booking.com/hotel/it/piazza-liberta-firenze-10min-dal-duomo-di-firenze.it.html",         // ← Sostituire con link reale
   },
+  //Santo Stefano
   {
     id: "santo-stefano",
     slug: "santo-stefano",
@@ -131,7 +135,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 4 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/6EWzc9SwBGxcgd5N7",
-    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
+    cin: "IT048006C2LA9I27P4",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 92,
     imgCover: "img/SantoStefano.jpeg",
     gallery: [
