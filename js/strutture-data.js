@@ -17,10 +17,11 @@ const STRUTTURE = [
     badge: "👥 Fino a 4 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/5DfsAddZxSmMHhjY9",
+    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 55,
-    imgCover: "img/Midori.png",               // Immagine principale (card e hero)
+    imgCover: "img/Midori.jpg",               // Immagine principale (card e hero)
     gallery: [                                 // Tutte le immagini dello slider
-      "img/Midori.png",
+      "img/Midori.jpg",
       "img/MIDORI/Midori2.jpg",
       "img/MIDORI/Midori3.jpg",
       "img/MIDORI/Midori4.jpg",
@@ -53,6 +54,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 5 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/FA8NgYUmkqcZCSjq6",
+    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 58,
     imgCover: "img/Togliatti.jpeg",
     gallery: [
@@ -89,6 +91,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 8 Ospiti",
     location: "Piazza della Libertà, Firenze, Toscana",
     mapsUrl: "https://share.google/cJhnM6vR1uyh9ezx9",
+    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 95,
     imgCover: "img/LIBERTA/liberta.jpeg",              // ← Sostituire con img reale
     gallery: [
@@ -128,6 +131,7 @@ const STRUTTURE = [
     badge: "👥 Fino a 4 Ospiti",
     location: "Campi Bisenzio, Firenze, Toscana",
     mapsUrl: "https://maps.app.goo.gl/6EWzc9SwBGxcgd5N7",
+    cin: "",                                   // Codice Identificativo Nazionale (es. "IT048008C2XXXXXXXX")
     mq: 92,
     imgCover: "img/SantoStefano.jpeg",
     gallery: [
@@ -171,6 +175,13 @@ const STRUTTURE = [
    ========================================================= */
 
 /**
+ * Badge discreto con il codice CIN (vuoto se il CIN non è ancora compilato)
+ */
+function cinBadge(s) {
+  return s.cin ? `<span class="cin-badge">CIN ${s.cin}</span>` : '';
+}
+
+/**
  * Genera le card per la sezione "Featured Properties" (usata in index.html e strutture.html)
  * @param {number} limit - quante card mostrare (undefined = tutte)
  */
@@ -193,7 +204,7 @@ function renderPropertyCards(containerId, limit) {
           </div>
         </div>
         <div class="card-footer">
-          <a href="strutture/${s.slug}.html" class="btn btn-outline btn-sm">Scopri di più</a>
+          <span class="btn btn-outline btn-sm">Scopri di più</span>
         </div>
       </a>
     </div>
@@ -223,6 +234,7 @@ function renderStrutturePage(containerId) {
           <h2 class="property-name">${s.nome}</h2>
           <span class="amenity-icon">📍 </span>
           <a href="${s.mapsUrl}" target="_blank" class="property-location">${s.location}</a>
+          ${cinBadge(s)}
           <div class="property-description">
             ${s.descrizione.map(p => `<p>${p}</p>`).join('')}
           </div>

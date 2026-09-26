@@ -372,7 +372,9 @@ window.addEventListener('load', () => {
 function initGalleries() {
     document.documentElement.style.visibility = 'visible';
 
-    document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    // Ogni galleria viene inizializzata una sola volta, anche se initGalleries() è richiamata
+    document.querySelectorAll('[data-gallery]:not([data-ready])').forEach(gallery => {
+        gallery.setAttribute('data-ready', '');
         const slides = gallery.querySelectorAll('.slide');
         const prev = gallery.querySelector('.prev');
         const next = gallery.querySelector('.next');
@@ -401,12 +403,12 @@ function initGalleries() {
     });
 
 
-    document.querySelectorAll('[data-card]').forEach(gallery => {
+    document.querySelectorAll('[data-card]:not([data-ready])').forEach(gallery => {
+        gallery.setAttribute('data-ready', '');
         const slides = gallery.querySelectorAll('.slide');
         const prev = gallery.querySelector('.prev');
         const next = gallery.querySelector('.next');
         let index = 0;
-        let interval;
 
         const showSlide = i => {
             slides[index].classList.remove('active');
@@ -414,8 +416,8 @@ function initGalleries() {
             slides[index].classList.add('active');
         };
 
-        next.addEventListener('click', () => showSlide(index + 1));
-        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', e => { e.stopPropagation(); showSlide(index + 1); });
+        prev.addEventListener('click', e => { e.stopPropagation(); showSlide(index - 1); });
     });
 }
 initGalleries();

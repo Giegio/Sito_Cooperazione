@@ -452,26 +452,8 @@
     </section>
 
 
-    <!-- SCRIPT SLIDER IMMAGINI ESPERIENZE -->
-    <script>
-        document.querySelectorAll('[data-card]').forEach(card => {
-            const slides = card.querySelectorAll('.slide');
-            let current = 0;
-            const showSlide = (n) => {
-                slides[current].classList.remove('active');
-                current = (n + slides.length) % slides.length;
-                slides[current].classList.add('active');
-            };
-            card.querySelector('.prev').addEventListener('click', (e) => {
-                e.stopPropagation();
-                showSlide(current - 1);
-            });
-            card.querySelector('.next').addEventListener('click', (e) => {
-                e.stopPropagation();
-                showSlide(current + 1);
-            });
-        });
-    </script>
+    <!-- Menu mobile, slider immagini esperienze, ecc. -->
+    <script src="js/main.js"></script>
 
     <!-- SCRIPT FILTRI A FINESTRELLA -->
     <script>
@@ -508,7 +490,7 @@
             });
         });
     </script>
-</body>
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -583,5 +565,7 @@
         </div>
     </div>
 </footer>
+
+</body>
 
 </html>

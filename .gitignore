@@ -4,3 +4,6 @@
 !.crew/graphs/
 !.crew/artifacts/.gitkeep
 !.crew/graphs/.gitkeep
+
+# Configurazione locale di Claude Code
+/.claude/

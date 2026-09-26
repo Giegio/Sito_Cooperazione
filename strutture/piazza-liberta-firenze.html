@@ -14,7 +14,7 @@
   <!-- Open Graph (per condivisioni social) -->
   <meta property="og:title" id="og-title" content="Piazza Libertà Firenze">
   <meta property="og:description" id="og-description" content="Appartamento di 95 m² a 4 passi dal centro storico di Firenze. Posizione privilegiata vicino a tutti i principali monumenti e servizi.">
-  <meta property="og:image" id="og-image" content="img/LIBERTA/liberta.jpeg">
+  <meta property="og:image" id="og-image" content="https://www.schomes.it/img/LIBERTA/liberta.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,7 +255,7 @@
       document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
       document.getElementById('og-title').setAttribute('content', struttura.nome);
       document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
-      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+      document.getElementById('og-image').setAttribute('content', new URL('../' + struttura.imgCover, location.href).href);
 
       // ── Breadcrumb ────────────────────────────────────────────
       document.getElementById('bc-current').textContent = struttura.nome;
@@ -305,6 +305,7 @@
       const locEl = document.getElementById('detail-location');
       locEl.textContent = `📍 ${struttura.location}`;
       locEl.href = struttura.mapsUrl;
+      locEl.insertAdjacentHTML('afterend', cinBadge(struttura));
 
       // ── Descrizione ───────────────────────────────────────────
       document.getElementById('detail-descrizione').innerHTML =

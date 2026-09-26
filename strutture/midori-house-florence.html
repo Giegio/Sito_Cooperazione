@@ -14,7 +14,7 @@
   <!-- Open Graph (per condivisioni social) -->
   <meta property="og:title" id="og-title" content="Midori House Florence">
   <meta property="og:description" id="og-description" content="Elegante appartamento di 55 m² in zona tranquilla e sicura, vicino a trasporti, ristoranti e centri benessere. Parcheggio gratuito nelle vicinanze.">
-  <meta property="og:image" id="og-image" content="img/Midori.png">
+  <meta property="og:image" id="og-image" content="https://www.schomes.it/img/Midori.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -256,7 +256,7 @@
       document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
       document.getElementById('og-title').setAttribute('content', struttura.nome);
       document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
-      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+      document.getElementById('og-image').setAttribute('content', new URL('../' + struttura.imgCover, location.href).href);
 
       // ── Breadcrumb ────────────────────────────────────────────
       document.getElementById('bc-current').textContent = struttura.nome;
@@ -306,6 +306,7 @@
       const locEl = document.getElementById('detail-location');
       locEl.textContent = `📍 ${struttura.location}`;
       locEl.href = struttura.mapsUrl;
+      locEl.insertAdjacentHTML('afterend', cinBadge(struttura));
 
       // ── Descrizione ───────────────────────────────────────────
       document.getElementById('detail-descrizione').innerHTML =

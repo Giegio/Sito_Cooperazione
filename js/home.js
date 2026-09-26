@@ -11,6 +11,7 @@ function initCarousel() {
 
         let currentIndex = 0;
         let isTransitioning = false;
+        let fallbackTimer;
 
         /** How many cards are fully visible at the current viewport width */
         function visibleCount() {
@@ -106,6 +107,9 @@ function initCarousel() {
             isTransitioning = true;
             currentIndex--;
             updateCarousel(true);
+            // Fallback se 'transitionend' non arriva (es. animazioni ridotte): evita il blocco del carosello
+            clearTimeout(fallbackTimer);
+            fallbackTimer = setTimeout(handleTransitionEnd, 600);
         });
 
         nextBtn.addEventListener('click', function () {
@@ -113,6 +117,9 @@ function initCarousel() {
             isTransitioning = true;
             currentIndex++;
             updateCarousel(true);
+            // Fallback se 'transitionend' non arriva (es. animazioni ridotte): evita il blocco del carosello
+            clearTimeout(fallbackTimer);
+            fallbackTimer = setTimeout(handleTransitionEnd, 600);
         });
 
         // Ascolta la fine della transizione
@@ -133,4 +140,4 @@ function initCarousel() {
         track.style.willChange = 'transform';
     });
 }
-initCarousel();
+// initCarousel() viene chiamata da index.html dopo renderPropertyCards()

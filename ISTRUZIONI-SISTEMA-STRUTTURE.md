@@ -84,6 +84,7 @@ Apri il file e copia questo blocco nell'array `STRUTTURE`:
   badge: "👥 Fino a X Ospiti",
   location: "Città, Provincia, Regione",
   mapsUrl: "https://maps.app.goo.gl/...",
+  cin: "IT048...",                  // Codice CIN (compare piccolo sotto l'indirizzo; vuoto = nascosto)
   mq: 70,
   imgCover: "img/NomeStruttura/cover.jpg",
   gallery: [

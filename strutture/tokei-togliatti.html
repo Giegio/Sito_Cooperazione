@@ -14,7 +14,7 @@
   <!-- Open Graph (per condivisioni social) -->
   <meta property="og:title" id="og-title" content="Tokei Togliatti">
   <meta property="og:description" id="og-description" content="Moderno appartamento di 58 m² con parcheggio gratuito di fronte. Fermata del bus per Firenze proprio sotto casa, animali benvenuti.">
-  <meta property="og:image" id="og-image" content="img/Togliatti.jpeg">
+  <meta property="og:image" id="og-image" content="https://www.schomes.it/img/Togliatti.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -256,7 +256,7 @@
       document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
       document.getElementById('og-title').setAttribute('content', struttura.nome);
       document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
-      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+      document.getElementById('og-image').setAttribute('content', new URL('../' + struttura.imgCover, location.href).href);
 
       // ── Breadcrumb ────────────────────────────────────────────
       document.getElementById('bc-current').textContent = struttura.nome;
@@ -306,6 +306,7 @@
       const locEl = document.getElementById('detail-location');
       locEl.textContent = `📍 ${struttura.location}`;
       locEl.href = struttura.mapsUrl;
+      locEl.insertAdjacentHTML('afterend', cinBadge(struttura));
 
       // ── Descrizione ───────────────────────────────────────────
       document.getElementById('detail-descrizione').innerHTML =

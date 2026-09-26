@@ -248,7 +248,7 @@
       document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
       document.getElementById('og-title').setAttribute('content', struttura.nome);
       document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
-      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+      document.getElementById('og-image').setAttribute('content', new URL('../' + struttura.imgCover, location.href).href);
 
       // ── Breadcrumb ────────────────────────────────────────────
       document.getElementById('bc-current').textContent = struttura.nome;
@@ -298,6 +298,7 @@
       const locEl = document.getElementById('detail-location');
       locEl.textContent = `📍 ${struttura.location}`;
       locEl.href = struttura.mapsUrl;
+      locEl.insertAdjacentHTML('afterend', cinBadge(struttura));
 
       // ── Descrizione ───────────────────────────────────────────
       document.getElementById('detail-descrizione').innerHTML =

@@ -430,6 +430,17 @@ p {
     background: var(--color-bg);
 }
 
+/* Codice CIN delle strutture: volutamente discreto */
+.cin-badge {
+    display: block;
+    width: fit-content;
+    margin: 0.25rem 0 1rem;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    color: #9a9a9a;
+}
+
 /* ========================================
    Forms
    ======================================== */

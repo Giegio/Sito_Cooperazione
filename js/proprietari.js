@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     let isTransitioning = false;
+    let fallbackTimer;
 
     /** How many cards are fully visible at the current viewport width */
     function visibleCount() {
@@ -104,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
         isTransitioning = true;
         currentIndex--;
         updateCarousel(true);
+        // Fallback se 'transitionend' non arriva (es. animazioni ridotte): evita il blocco del carosello
+        clearTimeout(fallbackTimer);
+        fallbackTimer = setTimeout(handleTransitionEnd, 600);
     });
 
     nextBtn.addEventListener('click', function () {
@@ -111,6 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
         isTransitioning = true;
         currentIndex++;
         updateCarousel(true);
+        // Fallback se 'transitionend' non arriva (es. animazioni ridotte): evita il blocco del carosello
+        clearTimeout(fallbackTimer);
+        fallbackTimer = setTimeout(handleTransitionEnd, 600);
     });
 
     // Ascolta la fine della transizione

@@ -14,7 +14,7 @@
   <!-- Open Graph (per condivisioni social) -->
   <meta property="og:title" id="og-title" content="Santo Stefano">
   <meta property="og:description" id="og-description" content="Splendido appartamento di 92 m² su due piani con vista sulla Rocca Strozzi, il fiume Bisenzio e le montagne toscane. A 10 min dall'aeroporto.">
-  <meta property="og:image" id="og-image" content="img/SantoStefano.jpeg">
+  <meta property="og:image" id="og-image" content="https://www.schomes.it/img/SantoStefano.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -257,7 +257,7 @@
       document.getElementById('page-description').setAttribute('content', struttura.descrizioneBreve);
       document.getElementById('og-title').setAttribute('content', struttura.nome);
       document.getElementById('og-description').setAttribute('content', struttura.descrizioneBreve);
-      document.getElementById('og-image').setAttribute('content', struttura.imgCover);
+      document.getElementById('og-image').setAttribute('content', new URL('../' + struttura.imgCover, location.href).href);
 
       // ── Breadcrumb ────────────────────────────────────────────
       document.getElementById('bc-current').textContent = struttura.nome;
@@ -307,6 +307,7 @@
       const locEl = document.getElementById('detail-location');
       locEl.textContent = `📍 ${struttura.location}`;
       locEl.href = struttura.mapsUrl;
+      locEl.insertAdjacentHTML('afterend', cinBadge(struttura));
 
       // ── Descrizione ───────────────────────────────────────────
       document.getElementById('detail-descrizione').innerHTML =
