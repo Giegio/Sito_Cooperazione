@@ -283,21 +283,6 @@ document.querySelectorAll('.form-control').forEach(input => {
     });
 });
 
-// Lazy Loading Images
-// ========================================
-
-if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.dataset.src;
-    });
-} else {
-    // Fallback for browsers that don't support lazy loading
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-    document.body.appendChild(script);
-}
-
 // Back to Top Button
 // ========================================
 
@@ -346,32 +331,9 @@ function createBackToTop() {
 // Initialize back to top button
 document.addEventListener('DOMContentLoaded', createBackToTop);
 
-// Console Welcome Message
-// ========================================
-
-console.log(
-    '%c👋 Benvenuto sul sito di Sara Celentani Property Manager!',
-    'color: #FFD700; font-size: 18px; font-weight: bold; font-family: Playfair Display, serif;'
-);
-
-console.log(
-    '%c✨ Sito web creato con passione per l\'ospitalità toscana',
-    'color: #1a1a1a; font-size: 14px; font-family: Poppins, sans-serif;'
-);
-
-// Performance Monitoring
-// ========================================
-
-window.addEventListener('load', () => {
-    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-    console.log(`⚡ Pagina caricata in ${loadTime}ms`);
-});
-
-// Prevent FOUC (Flash of Unstyled Content)
+// Gallerie immagini (strutture, esperienze, shop)
 // ========================================
 function initGalleries() {
-    document.documentElement.style.visibility = 'visible';
-
     // Ogni galleria viene inizializzata una sola volta, anche se initGalleries() è richiamata
     document.querySelectorAll('[data-gallery]:not([data-ready])').forEach(gallery => {
         gallery.setAttribute('data-ready', '');

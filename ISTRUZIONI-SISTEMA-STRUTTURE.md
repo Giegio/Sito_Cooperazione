@@ -117,7 +117,11 @@ strutture/nome-struttura.html
 ```
 **Non modificare niente** — il JS legge lo slug dall'URL automaticamente.
 
-### Passo 3 — Verifica
+### Passo 3 — Aggiorna la sitemap
+
+In `sitemap.xml` aggiungi una riga `<url>` per la nuova pagina (`https://www.schomes.it/strutture/nome-struttura.html`).
+
+### Passo 4 — Verifica
 
 Apri `strutture/nome-struttura.html` nel browser.
 La pagina si compila automaticamente con i dati inseriti.
