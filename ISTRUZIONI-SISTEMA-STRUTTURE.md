@@ -13,9 +13,7 @@ sito/
 │   └── struttura-detail.css       ← NUOVO — stili pagine dettaglio
 ├── strutture/                     ← NUOVA CARTELLA
 │   ├── midori-house-florence.html
-│   ├── santo-stefano.html
-│   ├── tokei-togliatti.html
-│   └── piazza-liberta-firenze.html
+│   └── tokei-togliatti.html
 └── struttura-template.html        ← Template per nuove strutture
 ```
 
